@@ -1,6 +1,6 @@
 Base de données sur « les films »
 
-A l’aide du logiciel MySQL Workbench, j’ai crée les deux fichiers movie_table.mwb et movie_table.svg pour les mcd et mld, j’ai rencontré des problèmes avec l’activation de la version étudiante JMERISE, je compte contacter le support technique afin de pouvoir le faire, je vais joindre à mon dossier le message d’erreur reçu.
+A l’aide du logiciel MySQL Workbench, j’ai crée les deux fichiers movietable.mwb et movietable.svg pour les mcd et mld, j’ai rencontré des problèmes avec l’activation de la version étudiante JMERISE, je compte contacter le support technique afin de pouvoir le faire, je vais joindre à mon dossier le message d’erreur reçu.
 
 Description des tables :
 
@@ -8,7 +8,7 @@ Description des tables :
 
 La table contient les informations nécessaires qui concernent un film réalisé et sont :
 
-•	Idfilms : L’identifiant du film (INT : type nombre entier)
+•	Idfilm : L’identifiant du film (INT : type nombre entier)
 
 •	Titre : Le titre du film (VARCHAR100 : type caractère limité à 100 caractères)
 
@@ -28,7 +28,7 @@ La table contient les informations nécessaires qui concernent un film réalisé
 
 Elle contient les informations nécessaires qui concernent les directeurs de production :
 
-•	IdDirecteurs : L’identifiant du directeur de production (INT : type nombre entier)
+•	IdDirecteur : L’identifiant du directeur de production (INT : type nombre entier)
 
 •	Nom : Le nom et le prénom du directeur de production (VARCHAR45 : type caractère limité à 45 caractères)
 
@@ -38,7 +38,7 @@ Elle contient les informations nécessaires qui concernent les directeurs de pro
 
 Elle contient les informations nécessaires qui concernent les acteurs :
 
-•	IdActeurs : L’identifiant de l’acteur (INT : type nombre entier)
+•	IdActeur : L’identifiant de l’acteur (INT : type nombre entier)
 
 •	Nom : Le nom et le prénom de l’acteur (VARCHAR45 : type caractère limité à 45 caractères)
 
@@ -48,7 +48,7 @@ Elle contient les informations nécessaires qui concernent les acteurs :
 
 Elle contient les genres des films :
 
-•	IdGenres : L’identifiant du genre (INT : type nombre entier)
+•	IdGenre : L’identifiant du genre (INT : type nombre entier)
 
 •	Nom : Le nom du genre de film (VARCHAR45 : type caractère limité à 45 caractères)
 
