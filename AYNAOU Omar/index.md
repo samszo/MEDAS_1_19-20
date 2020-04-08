@@ -1,4 +1,5 @@
 Base de données sur « les films »
+
 A l’aide du logiciel MySQL Workbench, j’ai crée les deux fichiers movie_table.mwb et movie_table.svg pour les mcd et mld, j’ai rencontré des problèmes avec l’activation de la version étudiante JMERISE, je compte contacter le support technique afin de pouvoir le faire, je vais joindre à mon dossier le message d’erreur reçu.
 Description des tables :
 -	Table « Films » :
