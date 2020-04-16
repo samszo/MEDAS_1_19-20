@@ -1,1 +1,1 @@
-Le site est disponible a l'adresse suivante : vm.helicorp.fr/omeka-s
+Le site est disponible a l'adresse suivante : http://vm.helicorp.fr/omeka-s
