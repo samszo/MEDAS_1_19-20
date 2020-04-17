@@ -6,6 +6,7 @@
 @prefix o: <http://omeka.org/s/vocabs/o#> .
 @prefix fup8: <https://jardindesconnaissances.univ-paris8.fr/onto/fup8#> .
 @prefix teach: <http://linkedscience.org/teach/ns#> .
+@prefix schema: <http://schema.org/> .
 
 <https://jardindesconnaissances.univ-paris8.fr/onto/fup8> a owl:Ontology ;
     dcterms:title "Formation Université Paris 8" .
