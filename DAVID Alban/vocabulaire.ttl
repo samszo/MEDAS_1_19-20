@@ -1,0 +1,222 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix coursbdd: <http://cours_bdd/alban/david> .
+@prefix teach: <http://linkedscience.org/teach/ns#> .
+@prefix schema: <http://schema.org/> .
+
+<cours_bdd> a owl:Ontology ;
+    dcterms:title "Groupe de musique. Cours BDD" .
+
+
+# Définition des classes 
+coursbdd:stats a rdfs:Class ;
+    rdfs:label "Statistics of the band" ;
+    rdfs:domain o:Resource ;
+    dcterms:description "";
+    vs:term_status "experimental" .
+
+coursbdd:band a rdfs:Class ;
+    rdfs:label "Band" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:function a rdfs:Class ;
+    rdfs:label "function of the musician" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:musician_band a rdfs:Class ;
+    rdfs:label "relation between musician and band" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:musician a rdfs:Class ;
+    rdfs:label "person" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:brand a rdfs:Class ;
+    rdfs:label "brand of the equipment" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:typeofmaterial a rdfs:Class ;
+    rdfs:label "type of material" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+coursbdd:material a rdfs:Class ;
+    rdfs:label "equipment" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:musician_equipment a rdfs:Class ;
+    rdfs:label "relation between musician and equipement" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+# Statistiques du groupe 
+coursbdd:DigitalCompact a rdf:Property ;
+    rdfs:label "NumbDigitalCompact" ;
+    dcterms:description "number of CDs sold";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:Concerts a rdf:Property ;
+    rdfs:label "Concerts" ;
+    dcterms:description "number of concerts";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:Streaming a rdf:Property ;
+    rdfs:label "Streaming" ;
+    dcterms:description "number of plays on all streaming platforms";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:Year a rdf:Property ;
+    rdfs:label "Year" ;
+    dcterms:description "Year about the completed statistics ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:Source a rdf:Property ;
+    rdfs:label "Source" ;
+    dcterms:description "Source of the statistics (person, url link, book etc.) ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+# Le groupe 
+coursbdd:NameBand a rdf:Property ;
+    rdfs:label "NameBand" ;
+    dcterms:description "Name of the band ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:Genre a rdf:Property ;
+    rdfs:label "Genre" ;
+    dcterms:description "One or more kind of music played by the band. For example : Dancehall ,Blues, Funk, Jazz etc.";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:date a rdf:Property ;
+    rdfs:label "date" ;
+    dcterms:description "date of band formation ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:origin a rdf:Property ;
+    rdfs:label "origin" ;
+    dcterms:description "The country origin of the band ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+#Fonction du musicien
+coursbdd:name a rdf:Property ;
+    rdfs:label "musician's function name" ;
+    dcterms:description "Function of a musician in a group. For exemple : bassist, guitarist, singer etc. ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+#Musicien_Groupe
+coursbdd:activity_start a rdf:Property ;
+    rdfs:label "activity_start" ;
+    dcterms:comment "when did the musician join the group? ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:activity_end a rdf:Property ;
+    rdfs:label "activity_end" ;
+    dcterms:description "when did the musician left the group? (if applicable) ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+#Musicien
+coursbdd:firstname a rdf:Property ;
+    rdfs:label "first name" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:lastname a rdf:Property ;
+    rdfs:label "last name" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:nickname a rdf:Property ;
+    rdfs:label "nickname" ;
+    dcterms:description "";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:nationality a rdf:Property ;
+    rdfs:label "nationality" ;
+    dcterms:description "musician's nationality";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:birth a rdf:Property ;
+    rdfs:label "birth date" ;
+    dcterms:description "musician's birthdate";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:death a rdf:Property ;
+    rdfs:label "death date" ;
+    dcterms:description "musician's deathdate";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#Type de matériel
+coursbdd:typeequipement a rdf:Property ;
+    rdfs:label "type of equipment" ;
+    dcterms:description "More specific as possible. Ex: Jazz Bass, Guitar amplificator, Acoustic Drum";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#Marque
+coursbdd:brandequipement a rdf:Property ;
+    rdfs:label "the brand of the equipement" ;
+    dcterms:description "Ex: Fender, EBS, Aguilar ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:manufacture a rdf:Property ;
+    rdfs:label "place of manufacture" ;
+    dcterms:description "The place where the instrument was manufactured ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:design a rdf:Property ;
+    rdfs:label "place of design" ;
+    dcterms:description "The place where the instrument was designed ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#Matériel
+coursbdd:color a rdf:Property ;
+    rdfs:label "color" ;
+    dcterms:description "The main color of an equipment. ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:reference a rdf:Property ;
+    rdfs:label "reference" ;
+    dcterms:description "The unique reference of an equipment. (Ex : the factory reference) ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+coursbdd:constructyear a rdf:Property ;
+    rdfs:label "construction year" ;
+    dcterms:description "the year the instrument was manufactured ";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
