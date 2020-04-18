@@ -6,7 +6,7 @@ En complément, je mets également à disposition un modele_mcd.svg et un modele
 ## Description des tables :
 
 ### Table musicien 
-L'objectif de cette table est d'avoir, pour chaque musicien, des informations de base les concernant. A savoir : le nom, le prénom, le nom de scène, nationalité, date de naissane, date de décès, lieu de naissance et âge. 
+L'objectif de cette table est d'avoir, pour chaque musicien, des informations de base les concernant. A savoir : le nom, le prénom, le nom de scène, nationalité, date de naissane et date de décès.
 
 ### Table groupe 
 Cette table permet d'avoir des informations essentielles sur le groupe : son nom, les principaux styles de musique définissant ce groupe, la date de formation et le pays d'origine. 
@@ -15,7 +15,7 @@ Cette table permet d'avoir des informations essentielles sur le groupe : son nom
 Cette table recense toutes les fonctions possibles d'un musicien dans un groupe (bassiste, guitarise, batteur etc.)
 
 ### Table statistiques groupe 
-Cette table permet d'avoir quelques statistiques concernant le nombre de CD vendus, nombre de concerts réalisés ainsi que le nombre total d'écoute sur les plateformes de streaming. 
+Cette table permet d'avoir, pour une année donnée, quelques statistiques concernant le nombre de CD vendus, nombre de concerts réalisés, le nombre total d'écoute sur les plateformes de streaming et les sources de ces informations. 
 
 ### Table type de matériel 
 Cette table utilise une association reflexive. Voici un tableau, non exhaustif, pour en illustrer le raisonnement.
@@ -28,7 +28,7 @@ Cette table utilise une association reflexive. Voici un tableau, non exhaustif, 
 |  4 | Clavier  | 1  |
 |  5 |  Guitare électrique | 2  |
 |  6 |  Basse électrique | 2  |
-|  7 |  Guiatre acoustique |  2 |
+|  7 |  Guitare acoustique |  2 |
 |  8 | Batterie électrique  | 3  |
 |  9 | Batterie acoustique  |  3 |
 
@@ -36,7 +36,7 @@ L'idée est est de pouvoir spécifier au maximum le type d'un instrument en fais
 Dans le tableau ci-dessu, Guitare/Basse - Batterie - Clavier sont des instruments "généraux". C'est pourquoi il sont tout en haut de la liste et que, surtout, leur "Id_type_materiel_parent" est 1. L'association réflexive va relier ces différents 1 à l'ID 1 (première ligne) qui est nommée instrument. Ainsi, Guitare/Basse - Batterie - Clavier sont tous reliés au nom "instrument". Ensuite, il faut spécifier, par exemple, le genre guitare/basse. C'est pourquoi il existe de la ligne 5 à 7 les sous catgégories suivantes : Guitare électrique - Basse électrique - Guiatre acoustique. Chacune de ces sous catégories ont comme "Id_type_materiel_parent" le nombre 2. Ce nombre 2 est également l'ID de la colonne 2 (guitare/basse). Ainsi, Guitare électrique - Basse électrique - Guitare acoustique sont chacune des sous catgégories de "guitare/basse". Il est possible de spécifier davantage ces sous catégories en leur assignant d'autres sous catégories. D'où l'utilité d'utiliser l'association relfexive. 
 
 ### Table matériel 
-Cette table permet de renseigner un matériel musical (un instrument) en lui assignant une couleur, une année de construction et une référence qui est unique (important pour la compréhension de la relation entre les tables). *Note :* Pour l'année de construction, je veux uniquement l'année sous le format YYYY. Un format (JJ-MM-YYYY) serait compliqué à renseigner de manière précise. Cependant, je n'ai pas pu spécifier sous sql workbench le format YEAR() qui parait le plus adapté (un message d'erreur apparaissait). J'ai donc décidé d'assigner le type integer à la variable année. 
+Cette table permet de renseigner un matériel musical (un instrument, une pédale d'effet, un amplificateur etc.) en lui assignant une couleur (sa couleur principale), une année de construction et une référence qui est unique (important pour la compréhension de la relation entre les tables). *Note :* Pour l'année de construction, je veux uniquement l'année sous le format YYYY. Un format (JJ-MM-YYYY) serait compliqué à renseigner de manière précise. Cependant, je n'ai pas pu spécifier sous sql workbench le format YEAR() qui parait le plus adapté (un message d'erreur apparaissait). J'ai donc décidé d'assigner le type integer à la variable année. 
 
 ### Table marque 
 Cette table permet d'avoir des informations sur le nom de la marque de l'instrument, son lieu de conception et de fabrication. 
