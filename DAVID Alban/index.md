@@ -1,7 +1,7 @@
 # Description de la basse de données sur le thème des groupes de musique
 
 *Note:* Le modele.svg et le modele.sql ont été créés avec MySQL Workbench. Le modèle est un *Enhanced entity–relationship model (EER)* et la notation *IE (Crow’s Feet)* a été utilisée.  
-En complément, je mets également à disposition un modele_MDC.svg et un modele_MLD.svg  
+En complément, je mets également à disposition un modele_MCD.svg et un modele_MLD.svg  
 
 ## Description des tables :
 
