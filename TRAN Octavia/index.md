@@ -35,7 +35,7 @@ Cette table nous permettra de connaître si l'animal à des parents dans le zoo.
 
 ## Relation des entités
 
-## Animaux x Zoo
+### Animaux x Zoo
 
 Un animal peut avoir 
 
