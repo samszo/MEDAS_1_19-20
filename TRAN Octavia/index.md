@@ -1,16 +1,16 @@
 # Base de donnée sur le thème du ZOO
 
-J'ai choisis de créer une base de donnée sur le thème du Zoo car elle offre de nombreuse possibilité de la modéliser.
+J'ai choisi de créer une base de donnée sur le thème du Zoo car elle offre de nombreuse possibilité de la modéliser.
 
 ## Description des tables 
 
 ### Animaux :
 
-Cette table permet d'avoir les informations essentiels sur l'animal. On va donc connaître son id, son nom, sa date naissance, son sexe et sa taille.
+Cette table permet d'avoir les informations essentiels sur l'animal. On va donc connaître son id, son nom, sa date naissance, son sexe, sa taille ainsi que les clés étrangères comme l'id de l'enclos, l'id du zoo d'origine, et l'id du zoo où l'animal se trouve actuellement.
 
 ### Zoo :
 
-Cette table va permettre de savoir à quel zoo l'animal appartient et d'où il vient s'il y a des échanges. 
+Cette table va permettre de savoir à quel zoo l'animal appartient et d'où il vient pour ainsi savoir s'il y a eu des échanges. 
 
 ### Soignants :
 
