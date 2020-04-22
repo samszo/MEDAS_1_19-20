@@ -4,6 +4,14 @@
      alt="Banniére"
      style="width:100px;float: left; margin-right: 10px;" />
      
+<h2> Information importante </h2>
+
+Mon site est en ligne a l'adresse suivante :
+
+<ul>vm.helicorp.fr/omeka-s</ul>
+
+Si il n'est pas actif et que vous souhaitez le voir, envoyer un mail pour que je le démarre.
+     
 <h2> Présentation du projet : </h2>
 
 Ce projet vise à créer un site via l'outil Omeka-S.
