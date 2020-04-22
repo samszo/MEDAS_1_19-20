@@ -1,0 +1,118 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix auto_ecole: <https://localhost/auto_ecole#> .
+
+<https://localhost/auto_ecole> a owl:Ontology.
+
+auto_ecole:Eleves a rdfs:Class ;
+    rdfs:label "Eleves" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+auto_ecole:Moniteur a rdfs:Class ;
+    rdfs:label "Moniteur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+auto_ecole:Voiture a rdfs:Class ;
+    rdfs:label "Voiture" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+auto_ecole:Lecon a rdfs:Class ;
+    rdfs:label "Lecon" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+auto_ecole:Nom a rdf:Property;
+    rdfs:label "Nom";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Prenom a rdf:Property;
+    rdfs:label "Prenom";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Adresse a rdf:Property;
+    rdfs:label "Adresse";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:CP a rdf:Property;
+    rdfs:label "CP";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Ville a rdf:Property;
+    rdfs:label "Ville";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Date_lecon a rdf:Property;
+    rdfs:label "Date_lecon";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Nom_moniteur a rdf:Property;
+    rdfs:label "Nom_moniteur";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Prenom_moniteur a rdf:Property;
+    rdfs:label "Prenom_moniteur";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Date_naissance a rdf:Property;
+    rdfs:label "Date_naissance";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Sexe a rdf:Property;
+    rdfs:label "Sexe";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Num_imatriculation a rdf:Property;
+    rdfs:label "Num_imatriculation";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:Modele a rdf:Property;
+    rdfs:label "Modele";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:couleur a rdf:Property;
+    rdfs:label "couleur";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:date_mise_circulation a rdf:Property;
+    rdfs:label "date_mise_circulation";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:idEleves a rdf:Property;
+    rdfs:label "idEleves";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:idLecon a rdf:Property;
+    rdfs:label "idLecon";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:idMoniteur a rdf:Property;
+    rdfs:label "idMoniteur";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+auto_ecole:idVoiture a rdf:Property;
+    rdfs:label "idVoiture";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
