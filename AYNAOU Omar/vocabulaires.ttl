@@ -1,0 +1,294 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix Loc_Logement: <https://localhost/Loc_Logement#> .
+
+
+<https://localhost/Loc_Logement#> a owl:Ontology ;
+    dcterms:title "location logement" .
+
+Loc_Logement:LOGEMENT a rdfs:Class ;
+    rdfs:label "LOGEMENT" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_ID a rdf:Property;
+    rdfs:label "id du logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_TYPE a rdf:Property;
+    rdfs:label "type du logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_ADRESSE a rdf:Property;
+    rdfs:label "adresse du logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_BAIN a rdf:Property;
+    rdfs:label "nombre de bain dans le logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_DOUCHE a rdf:Property;
+    rdfs:label "nombre de douche dans le logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_WC a rdf:Property;
+    rdfs:label "nombre de WC dans le logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_COUCHAGE a rdf:Property;
+    rdfs:label "nombre de couchage dans le logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_INTERNET a rdf:Property;
+    rdfs:label "acces internet dans le logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_AUTRES_EQUIPEMENTS a rdf:Property;
+    rdfs:label "les autres équipements dans le logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:PLANNING a rdfs:Class ;
+    rdfs:label "PLANNING" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:PLN_JOUR a rdf:Property;
+    rdfs:label "le planning du jour";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:CLIENT a rdfs:Class ;
+    rdfs:label "CLIENT" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:CLI_ID a rdf:Property;
+    rdfs:label "id du client";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:CLI_SEXE a rdf:Property;
+    rdfs:label "sexe du client";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:CLI_NOM a rdf:Property;
+    rdfs:label "nom du client";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:CLI_PRENOM a rdf:Property;
+    rdfs:label "prénom du client";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:CLI_ENSEIGNE a rdf:Property;
+    rdfs:label "l'enseigne du client";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:EMAIL a rdfs:Class ;
+    rdfs:label "EMAIL" ;
+    rdfs:domain o:Resource ;   
+    vs:term_status "experimental" .
+
+Loc_Logement:EML_ID a rdf:Property;
+    rdfs:label "id de l'émail";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:EML_ADRESSE a rdf:Property;
+    rdfs:label "l'adresse émail";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:EML_LOCALISATION a rdf:Property;
+    rdfs:label "la localisation de l'émail";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:ADRESSE a rdfs:Class ;
+    rdfs:label "ADRESSE" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:ADR_ID a rdf:Property;
+    rdfs:label "id de l'adresse";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:ADR_LIGNE1 a rdf:Property;
+    rdfs:label "ligne 1 de l'adresse";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:ADR_LIGNE2 a rdf:Property;
+    rdfs:label "ligne 2 de l'adresse";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:ADR_LIGNE3 a rdf:Property;
+    rdfs:label "ligne 3 de l'adresse";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:ADR_VILLE a rdf:Property;
+    rdfs:label "ville";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:ADR_PAYS a rdf:Property;
+    rdfs:label "pays";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TELEPHONE a rdfs:Class ;
+    rdfs:label "TELEPHONE" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TEL_ID a rdf:Property;
+    rdfs:label "id du téléphone";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TEL_TYPE a rdf:Property;
+    rdfs:label "le type du téléphone";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TEL_NUMERO a rdf:Property;
+    rdfs:label "le numéro du téléphone";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TEL_LOCALISATION a rdf:Property;
+    rdfs:label "localisation du téléphone";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_PLN_CLI a rdfs:Class ;
+    rdfs:label "LOG_PLN_CLI" ;
+    dcterms:description "European Credits Transfer System";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_PLN_CLI_NB_PERS a rdf:Property;
+    rdfs:label "nombre de personnes";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LOG_PLN_CLI_RESERVE a rdf:Property;
+    rdfs:label "client reservant";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+Loc_Logement:LOG_PLN_CLI_OCCUPE a rdf:Property;
+    rdfs:label "client occupant";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TRF_LOG a rdfs:Class ;
+    rdfs:label "TRF_LOG" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TRF_LOG_PRIX a rdf:Property;
+    rdfs:label "prix logement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TRF_DATE_DEBUT a rdf:Property;
+    rdfs:label "date de début de location";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TARIF a rdfs:Class ;
+    rdfs:label "TARIF" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TRF_TAUX_TAXES a rdf:Property;
+    rdfs:label "taux des taxes";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:TRF_SERVICES a rdf:Property;
+    rdfs:label "tarifs des services";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LIGNE_FACTURE a rdfs:Class ;
+    rdfs:label "LIGNE_FACTURE" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LGN_FAC_ID a rdf:Property;
+    rdfs:label "id de la ligne facture";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LGN_FAC_QTE a rdf:Property;
+    rdfs:label "quantité de la ligne facture";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+Loc_Logement:LGN_FAC_REMISE_POURCENT a rdf:Property;
+    rdfs:label "pourcentage de la remise";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LGN_FAC_REMISE_MONTANT a rdf:Property;
+    rdfs:label "montant de la remise";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LGN_FAC_MONTANT a rdf:Property;
+    rdfs:label "montant";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:LGN_FAC_TAUX_TVA a rdf:Property;
+    rdfs:label "taux de la tva";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:FACTURE a rdfs:Class ;
+    rdfs:label "FACTURE" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:FCT_ID a rdf:Property;
+    rdfs:label "id de la facture";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:FCT_PAIMENET_MDE a rdf:Property;
+    rdfs:label "mode du payement";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:FCT_DATE a rdf:Property;
+    rdfs:label "date de la facture";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Loc_Logement:FCT_PAIEMENT_DATE a rdf:Property;
+    rdfs:label "date du payement de la facture";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
