@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix cmmd: <https://monsitetest.com/cmmd#> .
+@prefix teach: <http://linkedscience.org/teach/ns#> .
+
+<https://monsitetest.com/ordr#> a owl:Ontology ;
+    dcterms:title "Commande" .
+
+cmmd:Commande a rdfs:Class ;
+    rdfs:label "Commande" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+cmmd:Det_commd a rdfs:Class ;
+    rdfs:label "Détail Commande" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+cmmd:Shop a rdfs:Class ;
+    rdfs:label "Magasin" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+cmmd:Product a rdfs:Class ;
+    rdfs:label "Produit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cmmd:id_commande a rdf:Property ;
+    rdfs:label "Lien commande" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cmmd:quantity a rdf:Property ;
+    rdfs:label "quantité de produits achetés" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cmmd:price a rdf:Property ;
+    rdfs:label "Prix" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+cmmd:product_name a rdf:Property ;
+    rdfs:label "Nom du produit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cmmd:product_category a rdf:Property ;
+    rdfs:label "Catégorie du produit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+cmmd:unit_price a rdf:Property ;
+    rdfs:label "Prix unitaire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+cmmd:shop_name a rdf:Property ;
+    rdfs:label "Nom du magasin" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+cmmd:type_shop a rdf:Property ;
+    rdfs:label "Type du magasin" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+		
+cmmd:lien_detail_cmd a rdf:Property ;
+    rdfs:label "Details de la commande" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
