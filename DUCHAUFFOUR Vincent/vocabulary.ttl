@@ -1,0 +1,69 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix cours: <http://www.site_vincent.duchauffour> .
+@prefix teach: <http://linkedscience.org/teach/ns#> .
+@prefix schema: <http://schema.org/> .
+
+<cours> a owl:Ontology ;
+    dcterms:title "Téléconsultation" .
+
+cours:Physician a rdfs:Class ;
+    rdfs:label "Physician" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Patient a rdfs:Class ;
+    rdfs:label "Patient" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Prescription a rdfs:Class ;
+    rdfs:label "Médicament" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Sector a rdf:Property ;
+    rdfs:label "activity_sector" ;
+    dcterms:description "Secteur d'activité" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Duration_consultation a rdf:Property ;
+    rdfs:label "duration_consultation" ;
+    dcterms:description "Durée de consultation" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Patient_status a rdf:Property ;
+    rdfs:label "patient_status" ;
+    dcterms:description "Status patient" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Vidal_code a rdf:Property ;
+    rdfs:label "vidal_code" ;
+    dcterms:description "Code Vidal" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Remboursability_rate a rdf:Property ;
+    rdfs:label "remboursability_rate" ;
+    dcterms:description "Taux de remboursement" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Price a rdf:Property ;
+    rdfs:label "price" ;
+    dcterms:description "Prix unitaire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+cours:Documentation a rdf:Property ;
+    rdfs:label "prescription_documentation" ;
+    dcterms:description "Description posologie" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
