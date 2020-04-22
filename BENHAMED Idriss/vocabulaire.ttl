@@ -1,0 +1,160 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix PC: <https://helicorp.fr/PC#> .
+
+<https://helicorp.fr/PC> a owl:Ontology.
+
+PC:PC a rdfs:Class ;
+    rdfs:label "PC" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:CarteMere a rdfs:Class ;
+    rdfs:label "Carte Mere" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:Socket a rdfs:Class ;
+    rdfs:label "Socket" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:Processeur a rdfs:Class ;
+    rdfs:label "Processeur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:Radiateur a rdfs:Class ;
+    rdfs:label "Radiateur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:Carte_Graphique a rdfs:Class ;
+    rdfs:label "Carte Graphique" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:Barette_RAM a rdfs:Class ;
+    rdfs:label "Barette de RAM" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:Chassis a rdfs:Class ;
+    rdfs:label "Chassis" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:Ventilateur a rdfs:Class ;
+    rdfs:label "Ventilateur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+PC:ID a rdf:Property;
+    rdfs:label "ID";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Marque a rdf:Property;
+    rdfs:label "Marque";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Modele a rdf:Property;
+    rdfs:label "Modele";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Type a rdf:Property;
+    rdfs:label "Type";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Taille a rdf:Property;
+    rdfs:label "Taille";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Nombre a rdf:Property;
+    rdfs:label "Nombre";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Couleur a rdf:Property;
+    rdfs:label "Couleur";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Format a rdf:Property;
+    rdfs:label "Format";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Frequence a rdf:Property;
+    rdfs:label "Frequence";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Norme a rdf:Property;
+    rdfs:label "Norme";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:Capacite a rdf:Property;
+    rdfs:label "Capacité de stockage";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+PC:hasCarteGrpahique a rdf:Property ;
+    rdfs:label "hasCG" ;
+    rdfs:comment "La carte mere a comme carte graphique" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
+
+PC:hasBaretteRAM a rdf:Property ;
+    rdfs:label "hasRAM" ;
+    rdfs:comment "La carte mere a comme Barette de ram" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
+
+PC:hasVentilateur a rdf:Property ;
+    rdfs:label "hasVentilateur" ;
+    rdfs:comment "Le chassis a comme ventilateur" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
+	
+PC:hasSocket a rdf:Property ;
+    rdfs:label "hasSocket" ;
+    rdfs:comment "Modele de socket" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
+
+PC:hasProcesseur a rdf:Property ;
+    rdfs:label "hasProcesseur" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
+
+PC:hasChassis a rdf:Property ;
+    rdfs:label "hasChassis" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
+
+PC:hasRadiator a rdf:Property ;
+    rdfs:label "hasRadiatteur" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
+
+PC:hasCM a rdf:Property ;
+    rdfs:label "Has Carte Mere" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs PC:ID ;
+    rdfs:isDefinedBy PC: .
