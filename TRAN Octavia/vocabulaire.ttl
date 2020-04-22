@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix zoobd: <https://vocabulaires_zoo_octavia.fr#> .
+@prefix teach: <http://linkedscience.org/teach/ns#> .
+@prefix schema: <http://schema.org/> .
+
+<https://vocabulaires_zoo_octavia.fr> a owl:Ontology ;
+    dcterms:title "vocabulaire" .
+
+zoobd:Animaux a rdfs:Class ;
+    rdfs:label "Animaux" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+zoobd:Especes a rdfs:Class ;
+    rdfs:label "Especes" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+zoobd:Date_naissance a rdf:Property ;
+    rdfs:label "Date de naissance" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+zoobd:taille a rdf:Property ;
+    rdfs:label "Taille" ;
+    rdfs:comment "taille de l'animal";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+zoobd:Date_expiration a rdf:Property ;
+    rdfs:label "Date d'expiration" ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "date de fin de contrat du soignant";
+    vs:term_status "experimental" .
+
+zoobd:Superficie a rdf:Property ;
+    rdfs:label "Superficie" ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "Superficie de l'enclos";
+    vs:term_status "experimental" .
+
+zoobd:id_enclos a rdf:Property ;
+    rdfs:label "id_enclos" ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "clé étrangère enclos";
+    vs:term_status "experimental" .
+
+zoobd:id_zoo_origine a rdf:Property ;
+    rdfs:label "id_zoo_origine " ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "clé étrangère zoo origine";
+    vs:term_status "experimental" .
+
+zoobd:id_zoo_courrant a rdf:Property ;
+    rdfs:label "id_zoo_courrant " ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "clé étrangère zoo courrant";
+    vs:term_status "experimental" .
+
+zoobd:id_secteur a rdf:Property ;
+    rdfs:label "id_secteur " ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "clé étrangère secteur";
+    vs:term_status "experimental" .
+    
+zoobd:id_soignant a rdf:Property ;
+    rdfs:label "id_soignant " ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "clé étrangère soignant";
+    vs:term_status "experimental" .
+    
+zoobd:id_animal a rdf:Property ;
+    rdfs:label "id_animal " ;
+    rdfs:domain o:Resource ;
+    rdfs:comment "clé étrangère animal";
+    vs:term_status "experimental" .
+    
