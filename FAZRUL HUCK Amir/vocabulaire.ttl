@@ -1,0 +1,197 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix Dae: <https://localhost/Dae#> .
+
+
+<https://localhost/Dae#> a owl:Ontology ;
+    dcterms:title "stage_etape" .
+
+#STAGIAIRE
+
+Dae:STAGIAIRE a rdfs:Class ;
+    rdfs:label "STAGIAIRE" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Stagiaire a rdf:Property;
+    rdfs:label "numero stagiaire";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Nom_Stagiaire a rdf:Property;
+    rdfs:label "nom stagiaire";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Prenom_Stagiaire a rdf:Property;
+    rdfs:label "prenom stagiaire";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Date_Naiss a rdf:Property;
+    rdfs:label "birth day";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#STAGE
+
+Dae:STAGE a rdfs:Class ;
+    rdfs:label "STAGE" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Stage a rdf:Property;
+    rdfs:label "numero stage";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Nom_Stage a rdf:Property;
+    rdfs:label "nom stage";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#SESSION
+
+Dae:SESSION a rdfs:Class ;
+    rdfs:label "SESSION" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Session a rdf:Property;
+    rdfs:label "numero session";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Date_Deb a rdf:Property;
+    rdfs:label "date debut";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Date_Fin a rdf:Property;
+    rdfs:label "date fin";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Stage a rdf:Property;
+    rdfs:label "numero stage";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+#MODULE
+
+Dae:MODULE a rdfs:Class ;
+    rdfs:label "MODULE" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Module a rdf:Property;
+    rdfs:label "numero module";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Titre_Module a rdf:Property;
+    rdfs:label "nom module";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#COMPORTE1
+
+Dae:COMPORTE1 a rdfs:Class ;
+    rdfs:label "COMPORTE1" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Module a rdf:Property;
+    rdfs:label "numero module";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Stage a rdf:Property;
+    rdfs:label "numero stage";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#PROFESSEUR
+
+Dae:PROFESSEUR a rdfs:Class ;
+    rdfs:label "PROFESSEUR" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Prof a rdf:Property;
+    rdfs:label "reference professeur";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Nom_Prof a rdf:Property;
+    rdfs:label "nom professeur";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Prenom_Prof a rdf:Property;
+    rdfs:label "prenom professeur";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#PRESTATION
+
+Dae:PRESTATION a rdfs:Class ;
+    rdfs:label "PRESTATION" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Presta a rdf:Property;
+    rdfs:label "numero presta";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Date_Deb a rdf:Property;
+    rdfs:label "date debut";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Date_Fin a rdf:Property;
+    rdfs:label "date fin";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:Nbr_H a rdf:Property;
+    rdfs:label "nombre heure";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Module a rdf:Property;
+    rdfs:label "numero module";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Session a rdf:Property;
+    rdfs:label "numero session";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Prof a rdf:Property;
+    rdfs:label "reference professeur";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#INSCRIPTION
+
+Dae:INSCRIPTION a rdfs:Class ;
+    rdfs:label "INSCRIPTION" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Stagiaire a rdf:Property;
+    rdfs:label "numero stagiaire";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+Dae:No_Session a rdf:Property;
+    rdfs:label "numero session";
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
