@@ -8,7 +8,7 @@
 
 Mon site est en ligne a l'adresse suivante :
 
-<ul>vm.helicorp.fr/omeka-s</ul>
+<ul><a href="http://vm.helicorp.fr/omeka-s">http://vm.helicorp.fr/omeka-s</a></ul>
 
 Si il n'est pas actif et que vous souhaitez le voir, envoyer un mail pour que je le démarre.
      
