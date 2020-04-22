@@ -80,4 +80,13 @@ Cette table permet de renseigner tout les données comptabilité, gestion , pour
 cette table permet d'enregistrer l'élève pour l'examen de cette session.
 
 <b>Relations entre les tables :</b>
+les Relations de tables sont en (1,0):  
+prestation -> module  
+prestation -> professeur  
+prestation -> session  
+comporte1 -> stage  
+comporte1 -> module  
+session -> stage    
+inscription -> stagiaire  
+isncription -> session  
 
