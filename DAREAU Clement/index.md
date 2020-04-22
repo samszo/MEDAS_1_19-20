@@ -9,7 +9,7 @@ Une commande concerne un ou plusieurs produits, tous comme un produit peut être
 Une facture est associée à une seule commande.
 Une livraison peut être associée à une ou plusieurs commandes, tous comme une commande peut être associée à plusieurs livraisons. 
 
-Le tables principales:
+Les tables principales:
 
 La table COMMANDE qui correspond à la table centrale du processus contient un identifiant unique, le numéro de commande (PRIMARY KEY). Les attributs sont la date de commande, le montant de la commande (€).
 
