@@ -61,13 +61,13 @@ Elle représente la relation entre clubs et Ligue des Champions.
 Un club peut gagner plusieurs éditions, le trophée peut être gagné par plusieurs clubs.
 
 
-### "Possède/appartient"
+### La table "Possède/appartient"
 
 Elle établie le relation entre clubs et joueurs. 
 Un club peut posséder plusieurs joueurs. A contrario, un joueur ne peut appartenir qu'à un seul club.
 
 
-### "Joueurs has Ligue des Champions" 
+### La table "Joueurs has Ligue des Champions" 
 
 Elle est la relation entre joueurs et Ligue des Champions.
 Un joueur peut gagner plusieurs trophées. De même qu'un trophée peut être gagné par plusieurs joueurs.
