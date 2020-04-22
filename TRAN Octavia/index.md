@@ -28,10 +28,6 @@ Grâce à cette table nous pourrons savoir dans quel secteur se trouvera l'anima
 
 L'objectif de cette table sera de savoir de quel espèce est l'animal. On aura besoin du nom et on aura aussi la possibilité d'écrire une description.
 
-### Parents :
-
-Cette table nous permettra de connaître si l'animal à des parents dans le zoo.
-
 
 ## Relation des entités
 
@@ -50,10 +46,6 @@ Un enclos peut avoir qu'un seul secteur (1, 1) et un secteur peut avoir au moins
 ### Animaux x Especes
 
 Un animal appartient à une espèce (1, 1) mais une espèce peut être catégorisé par plusieurs animaux (1, n)
-
-### Animaux x Parents
-
-un animal peut avoir aucun ou plusieurs parents (1, n) et un parents peut avoir un ou plusieurs enfants (1, n)
 
 ### Animaux x Zoo
 
