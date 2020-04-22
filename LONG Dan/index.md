@@ -1,5 +1,5 @@
 # Présentation de la base de données "Ligue des Champions"
-==========================================================
+-------------------------------------------------------------
 
 La Ligue des Champions. La coupe au grandes oreilles. La plus prestigieuse des compétitions. Le lieu où se rassemblent les meilleurs équipes d'Europe, les meilleurs joueurs.
 
