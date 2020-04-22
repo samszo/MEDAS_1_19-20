@@ -1,0 +1,156 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix pdo: <http://vocab.deri.ie/pdo> .
+@prefix soccinema: <https://localhost/soccinema/#> .
+
+<https://localhost/soccinema> a owl:Ontology.
+
+
+# Définition des classes 
+
+
+soccinema:film a rdfs:Class ;
+    rdfs:label "film" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:typefilm a rdfs:Class ;
+    rdfs:label "type de film" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:personnel a rdfs:Class ;
+    rdfs:label "personnel" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:affecter a rdfs:Class ;
+    rdfs:label "l'affectation du personnel au salle" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:reservesalle a rdfs:Class ;
+    rdfs:label "reserver les seances" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:salle a rdfs:Class ;
+    rdfs:label "Salle du cinema" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:cinema a rdfs:Class ;
+    rdfs:label "cinema" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+	
+soccinema:ID a rdf:Property;
+    rdfs:label "ID";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental"	.
+	
+# Le type de film
+soccinema:nomTypeFilm a rdf:Property ;
+    rdfs:label "nomTypeFilm" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental"  .
+
+# Les Films
+
+soccinema:nomFilm a rdf:Property ;
+    rdfs:label "nomFilm" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:Durée a rdf:Property ;
+    rdfs:label "datetime" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+#Les salle reservé
+soccinema:debutProj a rdf:Property ;
+    rdfs:label "datetime" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+soccinema:finProj a rdf:Property ;
+    rdfs:label "datetime" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental"  .
+	
+#Le personnel
+soccinema:nom a rdf:Property ;
+    rdfs:label "nom du personnel" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+soccinema:prenom a rdf:Property ;
+    rdfs:label "prénom de la personne" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental"  .
+	
+soccinema:dataNaiss a rdf:Property ;
+    rdfs:label "date de naissance" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental"  .
+
+#L'affectation
+
+#salle
+soccinema:nomSalle a rdf:Property ;
+    rdfs:label "Nom de la salle" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+soccinema:nbrPlace a rdf:Property ;
+    rdfs:label "Nombre de place" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental"  .
+
+
+#Cinéma
+soccinema:nomCinéma a rdf:Property ;
+    rdfs:label "nom du cinéma" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+soccinema:adresseCinema a rdf:Property ;
+    rdfs:label "adresseCinema" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+# Les assignations
+
+soccinema:hasFilm a rdf:Property ;
+    rdfs:label "hasFilm" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs soccinema:ID ;
+    rdfs:isDefinedBy soccinema: .
+
+soccinema:hasTypeFilm a rdf:Property ;
+    rdfs:label "hasTypeFilm" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs soccinema:ID ;
+    rdfs:isDefinedBy soccinema: .
+
+soccinema:hasSalle a rdf:Property ;
+    rdfs:label "hasSalle" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs soccinema:ID ;
+    rdfs:isDefinedBy soccinema: .
+
+soccinema:hasCinema a rdf:Property ;
+    rdfs:label "hasCinema" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs soccinema:ID ;
+    rdfs:isDefinedBy soccinema: .
+
+soccinema:hasPersonnel a rdf:Property ;
+    rdfs:label "hasPersonnel" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs soccinema:ID ;
+    rdfs:isDefinedBy soccinema: .
