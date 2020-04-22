@@ -61,3 +61,10 @@ Un chassis est composé de :
      <li> D'une marque, qui correspond au constructeur</li>
      <li> Un format </li>
      <li> Et le nombre de ventilateur </li></ul>
+
+
+<h2> Valeur importé dans le vocabulaire exterieur </h2>
+
+<ul>http://theme-e.adaptcentre.ie/dave/dave.ttl</ul>
+
+Ce vocabulaire contient une liste de datatype.
