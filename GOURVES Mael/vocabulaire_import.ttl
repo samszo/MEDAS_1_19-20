@@ -1,0 +1,123 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix TRAIN: <https://localhost/TRAIN#> .
+
+<https://localhost/TRAIN> a owl:Ontology.
+
+TRAIN:Client a rdfs:Class ;
+    rdfs:label "Client" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+TRAIN:Carte_Fid a rdfs:Class ;
+    rdfs:label "Carte_Fid" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+TRAIN:Facture a rdfs:Class ;
+    rdfs:label "Facture" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+TRAIN:Voyage a rdfs:Class ;
+    rdfs:label "Voyage" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+TRAIN:Voiture a rdfs:Class ;
+    rdfs:label "Voiture" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+TRAIN:Train a rdfs:Class ;
+    rdfs:label "Train" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+TRAIN:NOM a rdf:Property;
+    rdfs:label "NOM";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:PRENOM a rdf:Property;
+    rdfs:label "PRENOM";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Type_Fid a rdf:Property;
+    rdfs:label "Type_Fid";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Prix a rdf:Property;
+    rdfs:label "Prix";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Date a rdf:Property;
+    rdfs:label "Date";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Gare_Dep a rdf:Property;
+    rdfs:label "Gare de départ";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Gare_Arr a rdf:Property;
+    rdfs:label "Gare d'arrivé";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Place a rdf:Property;
+    rdfs:label "Place";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Classe a rdf:Property;
+    rdfs:label "Classe";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Nom_Voit a rdf:Property;
+    rdfs:label "Nom de voiture";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Nom_Train a rdf:Property;
+    rdfs:label "Nom de train";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Id_Client a rdf:Property;
+    rdfs:label "Id_Client";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Id_Carte a rdf:Property;
+    rdfs:label "Id_Carte";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Id_Facture a rdf:Property;
+    rdfs:label "Id_Facture";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Id_Voyage a rdf:Property;
+    rdfs:label "Id_Voyage";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Id_Voiture a rdf:Property;
+    rdfs:label "Id_Voyage";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+TRAIN:Id_Train a rdf:Property;
+    rdfs:label "Id_Train";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
