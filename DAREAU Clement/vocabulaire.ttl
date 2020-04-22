@@ -1,0 +1,184 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix COMMERCE: <https://localhost/COMMERCE#> .
+
+<https://localhost/COMMERCE> a owl:Ontology.
+
+COMMERCE:Client a rdfs:Class ;
+    rdfs:label "Client" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+COMMERCE:Commande a rdfs:Class ;
+    rdfs:label "Commande" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+COMMERCE:Commande_produit a rdfs:Class ;
+    rdfs:label "Commande_produit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+COMMERCE:Produit a rdfs:Class ;
+    rdfs:label "Produit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+COMMERCE:Livraison a rdfs:Class ;
+    rdfs:label "Livraison" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+COMMERCE:Facture a rdfs:Class ;
+    rdfs:label "Facture" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+	
+COMMERCE:Adresse a rdfs:Class ;
+    rdfs:label "Adresse" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+COMMERCE:id_client a rdf:Property;
+    rdfs:label "id_client";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Nom a rdf:Property;
+    rdfs:label "Nom";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Prenom a rdf:Property;
+    rdfs:label "Prenom";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Genre a rdf:Property;
+    rdfs:label "Genre";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Date_naissance a rdf:Property;
+    rdfs:label "Date_naissance";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Email a rdf:Property;
+    rdfs:label "Email";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+	
+COMMERCE:id_commande a rdf:Property;
+    rdfs:label "id_commande";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Date_commande a rdf:Property;
+    rdfs:label "Date_commande";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Montant a rdf:Property;
+    rdfs:label "Montant";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+	
+COMMERCE:id_commande_produit a rdf:Property;
+    rdfs:label "id_commande_produit";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Quantitee a rdf:Property;
+    rdfs:label "Quantitee";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:id_produit a rdf:Property;
+    rdfs:label "id_produit";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Marque a rdf:Property;
+    rdfs:label "Marque";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Type a rdf:Property;
+    rdfs:label "Type";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Fournisseur a rdf:Property;
+    rdfs:label "Fournisseur";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+	
+COMMERCE:Prix_unitaire a rdf:Property;
+    rdfs:label "Prix_unitaire";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .	
+	
+COMMERCE:Informations a rdf:Property;
+    rdfs:label "Informations";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .		
+	
+COMMERCE:id_livraison a rdf:Property;
+    rdfs:label "id_livraison";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .	
+	
+COMMERCE:Date_livraison a rdf:Property;
+    rdfs:label "Date_livraison";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Livreur a rdf:Property;
+    rdfs:label "Livreur";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+	
+COMMERCE:id_facture a rdf:Property;
+    rdfs:label "id_facture";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Prix_ht a rdf:Property;
+    rdfs:label "Prix_ht";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+	
+COMMERCE:Prix_ttc a rdf:Property;
+    rdfs:label "Prix_ttc";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:id_adresse a rdf:Property;
+    rdfs:label "id_adresse";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+
+COMMERCE:Rue a rdf:Property;
+    rdfs:label "Rue";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+COMMERCE:Ville a rdf:Property;
+    rdfs:label "Ville";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+	
+COMMERCE:Code_postal a rdf:Property;
+    rdfs:label "Code_postal";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+	
+COMMERCE:Pays a rdf:Property;
+    rdfs:label "Pays";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
