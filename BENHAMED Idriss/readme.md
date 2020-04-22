@@ -7,7 +7,3 @@
 <h2> Présentation du projet : </h2>
 
 Ce projet vise à créer un site via l'outil Omeka-S.
-
-<h2> Première étape : choix du sujet et conception de la base </h2>
-
-Le sujet consistera à décrire les divers composants d'un ordinateur et de les lier entre eux.
