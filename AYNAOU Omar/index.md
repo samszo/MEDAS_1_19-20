@@ -1,47 +1,42 @@
-Base de données sur « les films »
+Base de données « location de logements »
 
-A l’aide du logiciel MySQL Workbench, j’ai crée les deux fichiers movietable.mwb et movietable.svg pour les mcd et mld, j’ai rencontré des problèmes avec l’activation de la version étudiante JMERISE, je compte contacter le support technique afin de pouvoir le faire, je vais joindre à mon dossier le message d’erreur reçu.
+A l’aide du logiciel MySQL Workbench, j’ai crée les deux fichiers loc_logement.mwb et loc_logement.svg, pour le fichier loc_logement_mcd, il a été généré par le logiciel AnalyseSI,
 
 Description des tables :
 
-1-	Table « Films » :
+1-	Table « LOGEMENT » :
 
-La table contient les informations nécessaires qui concernent un film réalisé et sont :
+La table contient les informations nécessaires qui concernent le logement à louer sont :
 
-•	Idfilm : L’identifiant du film (INT : type nombre entier)
+•	LOG_ID : L’id du logement (type : INT)
+•	LOG_TYPE : Le type du logement  (type : VARCHAR(32())
+•	LOG_ADRESSE : L'adresse du logement (type : TEXT)
+•	LOG_BAIN : Le nombre de bains dans le logement (type : INT)
+•	LOG_DOUCHE : Le nombre de douches dans le logement (type : INT)
+•	LOG_WC : Le nombre de WCs dans le logement (type : INT)
+•	LOG_COUCHAGE : Le nombre de couchage dans le logement (type : SMALLINT(2))
+•	LOG_INTERNET : L'accès à l'internet dans logement (type : CHAR(3))
+•	LOG_AUTRES_EQUIPEMENTS : Les autres équipements dans le logement (type : TEXT)
 
-•	Titre : Le titre du film (VARCHAR100 : type caractère limité à 100 caractères)
+2-	Table « CLIENT » : 
 
-•	Date_de_sortie : La date de sortie du film (type Date)
+Elle contient les informations nécessaires qui concernent les clients :
 
-•	Certificat : Certificat du film (VARCHAR45 : type caractère limité à 45 caractères)
+•	CLI_ID : L’id du client (type : INT)
+•	CLI_SEXE : Le sexe du client (type : VARCHAR(32))
+•	CLI_NOM : Le nom du client (type : CHAR(32))
+•	CLI_PRENOM : Le prénom du client (type : VARCHAR(32))
+•	CLI_ENSEIGNE : L'enseigne du client (type : VARCHAR(100))
 
-•	Durée : La durée du film (type TIME)
+3-	Table « PLANNING » : 
 
-•	Imdb_vote : Vote selon L’Internet Movie Database ‘’base de données en ligne sur le cinéma mondial et la télévision’’ (Float : type nombre réel)
+Elle contient  :
 
-•	Description : Description du film (type TEXT)
+•	PLN_JOUR : La date du jour (type : DATE)
 
-•	Metascore : La note donnée par le site américain Metacritic au film (INT : type nombre entier)
+3-	Table « LOG_PLN_CLI » : 
 
-2-	Table « Directeurs » : 
-
-Elle contient les informations nécessaires qui concernent les directeurs de production :
-
-•	IdDirecteur : L’identifiant du directeur de production (INT : type nombre entier)
-
-•	Nom : Le nom et le prénom du directeur de production (VARCHAR45 : type caractère limité à 45 caractères)
-
-•	Biographie : Les informations sur la vie du directeur de production (type TEXT)
-
-3-	Table « Acteurs » : 
-
-Elle contient les informations nécessaires qui concernent les acteurs :
-
-•	IdActeur : L’identifiant de l’acteur (INT : type nombre entier)
-
-•	Nom : Le nom et le prénom de l’acteur (VARCHAR45 : type caractère limité à 45 caractères)
-
+La table 
 •	Biographie : Les informations sur la vie de l’acteur (type TEXT)
 
 4-	Table « Genres » : 
