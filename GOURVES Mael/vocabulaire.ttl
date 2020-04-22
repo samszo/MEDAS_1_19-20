@@ -1,0 +1,29 @@
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo:	<http://dbpedia.org/ontology/> .
+dbo:locomotive	rdfs:domain	dbo:Train .
+dbo:wagon	rdfs:domain	dbo:Train .
+@prefix ns2:	<http://open.vocab.org/terms/> .
+dbo:	ns2:defines	dbo:Train .
+<http://dbpedia.org/ontology/data/definitions.ttl>	ns2:describes	dbo:Train .
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:	<http://www.w3.org/2002/07/owl#> .
+dbo:Train	rdf:type	owl:Class .
+@prefix wikidata:	<http://www.wikidata.org/entity/> .
+dbo:Train	owl:equivalentClass	wikidata:Q870 ;
+	rdfs:label	"Zug"@de ,
+		"\u03C4\u03C1\u03AD\u03BD\u03BF"@el ,
+		"treno"@it ,
+		"train"@fr ,
+		"\u5217\u8ECA"@ja ,
+		"train"@en ,
+		"trein"@nl ,
+		"traein"@ga ,
+		"tren"@es ;
+	rdfs:isDefinedBy	dbo: ;
+	owl:sameAs	dbo:Train ;
+	rdfs:subClassOf	dbo:MeanOfTransportation .
+@prefix wdrs:	<http://www.w3.org/2007/05/powder-s#> .
+dbo:Train	wdrs:describedby	<http://dbpedia.org/ontology/data/definitions.ttl> .
+@prefix prov:	<http://www.w3.org/ns/prov#> .
+@prefix ns8:	<http://mappings.dbpedia.org/index.php/OntologyClass:> .
+dbo:Train	prov:wasDerivedFrom	ns8:Train .
