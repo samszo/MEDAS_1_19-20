@@ -1,0 +1,144 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix modele: <https://localhost:8888/omeka-s> .
+
+<https://localhost:8888/omeka-s> a owl:Ontology.
+
+
+modele:product a rdfs:Class ;
+    rdfs:label "product" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:level_one_inventory a rdfs:Class ;
+    rdfs:label "level_one_inventory" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:family a rdfs:Class ;
+    rdfs:label "family" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:level_one_sale a rdfs:Class ;
+    rdfs:label "level_one_sale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:customer a rdfs:Class ;
+    rdfs:label "customer" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:customer_country a rdfs:Class ;
+    rdfs:label "customer_country" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:level_two_sale a rdfs:Class ;
+    rdfs:label "level_two_sale" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:distributor a rdfs:Class ;
+    rdfs:label "distributor" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:distributor_country a rdfs:Class ;
+    rdfs:label "distributor_country" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+modele:level_one_sale_id a rdf:Property;
+    rdfs:label "level_one_sale_id";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:level_two_sale_id a rdf:Property;
+    rdfs:label "level_two_sale_id";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:level_one_inventory_id a rdf:Property;
+    rdfs:label "level_one_inventory_id";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:product_id a rdf:Property;
+    rdfs:label "product_id";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:product_name a rdf:Property;
+    rdfs:label "product_name";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:product_family_id a rdf:Property;
+    rdfs:label "product_family_id";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:product_price a rdf:Property;
+    rdfs:label "product_price";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:quantity a rdf:Property;
+    rdfs:label "quantity";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:product_family_name a rdf:Property;
+    rdfs:label "product_family_name";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:date a rdf:Property;
+    rdfs:label "date";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:customer_id a rdf:Property;
+    rdfs:label "customer_id";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:customer_name a rdf:Property;
+    rdfs:label "customer_name";
+    rdfs:domain o:Ressource;
+    vs:term_status "experimental" .
+
+modele:customer_country_id a rdf:Property ;
+    rdfs:label "customer_country_id" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy modele: .
+
+modele:customer_country_name a rdf:Property ;
+    rdfs:label "customer_country_name" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy modele: .
+
+modele:distributor_name a rdf:Property ;
+    rdfs:label "distributor_name" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy modele: .
+
+modele:distributor_country_id a rdf:Property ;
+    rdfs:label "distributor_country_id" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy modele: .
+
+modele:distributor_country_name a rdf:Property ;
+    rdfs:label "distributor_country_name" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy modele: .
+
+modele:distributor_id a rdf:Property ;
+    rdfs:label "distributor_id" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy modele: .
