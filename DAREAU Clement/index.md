@@ -1,4 +1,4 @@
-Cette base données décrit la chaine de traitement d'un magasin livrant divers produits divers et variés directement au domicile des clients.
+Cette base données décrit la chaine de traitement d'un magasin livrant des produits divers et variés directement au domicile des clients.
 
 
 Relations:
