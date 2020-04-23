@@ -1,5 +1,7 @@
+Base données sur la clientèle d'un magasin
+
 La base de données contient les données client d'une enseigne Hi-Tech & Accessoires, qui regroupe les commandes des clients.
-Nous avons alors 5 tables :
+Ci-dessous les 5 tables de note base :
 
 ADRESSE : c'est la table contenant l'adresse des clients. Elle est composée d'un identifiant qui est l'adresse complète, du numéro de rue, du nom de la rue, du code postal et de la ville tout en ajoutant l'identifiant client qui est rattaché en tant que clé étangère.
 
@@ -11,5 +13,4 @@ FIDELITE : c'est la table contenant les données présentes sur la carte de fid�
 
 PRODUIT : c'est la table contenant les produits vendus dans les commandes. Elle est composée de l'identifiant de produit qui correpond à la référence du produit (le code-barres), du nom du produit, d'une description de l'objet occasionnelle, du prix du produit tout en ajoutant le numéro de commande en tant que clé étangère.
 
-
-Liaisons de tables : Un client peut ne pas avoir commandé (relation 0,n). Autrement dit, une personne peut avoir un compte client sans n'avoir jamais commandé. Une commande est effectuée par un seul client (relation 1,1). Un produit peut n'avoir été jamais commandé, et peut être commandé un nombre infini de fois (relation 0,n). Ce sera notamment le cas pour les produits que l'on vient tout juste de mettre dans les magasins. Un magasin peut n'avoir jamais eu de commande, et peut être rattaché à un nombre infini de commande (relation 0,n). Ce sera le cas pour les nouveaux magasins, entrés en base de données mais qui n'ont pas encore ouvert. Un détail de commande comporte un produit et un seul, est effectuée dans un seul magasin et correspond à une seule commande. (relations 1,1).
+Liaisons de tables : Il est possible qu'un client soit répertorié sans avoir commandé (0,n). Une commande est effectuée par un seul client (1,1). Un produit peut ne pas être commandé ou être commandé plusieurs fois (0,n). Un client peut avoir plusieurs adresses et une adresse peut appartenir à plusieurs clients (plusieurs comptes dans une famille par exemple) (n,n). Un client n'a pas toujours de carte de fidélité et une carte de fidélité n'appartient qu'à une seule personne (0,1). Enfin, une seule carte de fidélité peut comporter plusieurs comandes (1,n).
