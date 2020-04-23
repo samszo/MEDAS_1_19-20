@@ -1,6 +1,6 @@
 Base données sur la clientèle d'un magasin
 
-La base de données contient les données client d'une enseigne Hi-Tech & Accessoires, qui regroupe les commandes des clients.
+La base de données représente les données clientèles d'une enseigne Hi-Tech & Accessoires, qui regroupe les commandes des clients.
 Ci-dessous les 5 tables de note base :
 
 ADRESSE : c'est la table contenant l'adresse des clients. Elle est composée d'un identifiant qui est l'adresse complète, du numéro de rue, du nom de la rue, du code postal et de la ville tout en ajoutant l'identifiant client qui est rattaché en tant que clé étangère.
