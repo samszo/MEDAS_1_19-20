@@ -1,0 +1,252 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix fup8: <https://jardindesconnaissances.univ-paris8.fr/onto/fup8#> .
+@prefix fup9: <https://jardindesconnaissances.univ-paris8.fr/onto/fup9#> .
+@prefix fup10: <https://jardindesconnaissances.univ-paris8.fr/onto/fup10#> .
+@prefix fup11: <https://jardindesconnaissances.univ-paris8.fr/onto/fup11#> .
+@prefix fup12: <https://jardindesconnaissances.univ-paris8.fr/onto/fup12#> .
+@prefix teach: <http://linkedscience.org/teach/ns#> .
+@prefix schema: <http://schema.org/> .
+
+<https://jardindesconnaissances.univ-paris8.fr/onto/fup9> a owl:Ontology ;
+    dcterms:title "Formation Université Paris 8" .
+
+
+fup12:Categorie a rdfs:Class ;
+    rdfs:label "Categorie" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup12:NumCategorie a rdf:Property ;
+    rdfs:label "NumCategorie" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup12:DescriptionCategorie a rdf:Property ;
+    rdfs:label "DescriptionCategorie" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup11:Commandes a rdfs:Class ;
+    rdfs:label "Commandes" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup11:NumCommandes a rdf:Property ;
+    rdfs:label "NumCommandes" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+fup11:DateCommandes a rdf:Property ;
+    rdfs:label "DateCommandes" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup11:DateExpedition a rdf:Property ;
+    rdfs:label "DateExpedition" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup11:NumClient a rdf:Property ;
+    rdfs:label "NumClient" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup11:NumSalarie a rdf:Property ;
+    rdfs:label "NumSalarie" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+
+
+
+fup10:Produits a rdfs:Class ;
+    rdfs:label "Produits" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup10:NumProduit a rdf:Property ;
+    rdfs:label "NumProduit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup10:NomProduit a rdf:Property ;
+    rdfs:label "NomProduit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup10:DescriptionProduit a rdf:Property ;
+    rdfs:label "DescriptionProduit" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup10:PrixPublic a rdf:Property ;
+    rdfs:label "PrixPublic" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup10:QuantiteEnStock a rdf:Property ;
+    rdfs:label "QuantiteEnStock" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+fup9:Fournisseur a rdfs:Class ;
+    rdfs:label "Fournisseur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup9:NumFournisseur a rdf:Property ;
+    rdfs:label "NumFournisseur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup9:AdresseFournisseur a rdf:Property ;
+    rdfs:label "AdresseFournisseur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup9:VilleFournisseur a rdf:Property ;
+    rdfs:label "VilleFournisseur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup9:CodePostalFournisseur a rdf:Property ;
+    rdfs:label "CodePostalFournisseur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+fup9:TelephoneFournisseur a rdf:Property ;
+    rdfs:label "TelephoneFournisseur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup9:TelecopieFournisseur a rdf:Property ;
+    rdfs:label "TelecopieFournisseur" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+
+
+fup8:Mention a rdfs:Class ;
+    rdfs:label "Mention" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:Parcours a rdfs:Class ;
+    rdfs:label "Parcours" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:UE a rdfs:Class ;
+    rdfs:label "Unité d'enseignement" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:EC a rdfs:Class ;
+    rdfs:label "Élément constitutif" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs schema:Course ;    
+    vs:term_status "experimental" .
+
+fup8:Intervention a rdfs:Class ;
+    rdfs:label "Intervention" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:code a rdf:Property ;
+    rdfs:label "Code EC" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:ects a rdf:Property ;
+    rdfs:label "ects" ;
+    dcterms:description "European Credits Transfer System";
+    rdfs:domain o:Resource ;
+    owl:sameAs teach:ects ;
+    vs:term_status "experimental" .
+
+fup8:semestre a rdf:Property ;
+    rdfs:label "semestre" ;
+    rdfs:domain o:Resource ;
+    owl:sameAs "ov:semester" ;
+    vs:term_status "experimental" .
+
+fup8:coef a rdf:Property ;
+    rdfs:label "coefficient" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:vhec a rdf:Property ;
+    rdfs:label "Volume Horaire en présentiel" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:vhch a rdf:Property ;
+    rdfs:label "Volume Horaire chargé" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:cch a rdf:Property ;
+    rdfs:label "Choix du Créneau Horaire" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:pcCM a rdf:Property ;
+    rdfs:label "% Cours magistraux" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:pcTD a rdf:Property ;
+    rdfs:label "% Travaux dirigés" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:pcTP a rdf:Property ;
+    rdfs:label "% Travaux pratiques" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:sd a rdf:Property ;
+    rdfs:label "Seuil dédoublement" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:libre a rdf:Property ;
+    rdfs:label "EC Libre" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:mutuaDst a rdf:Property ;
+    rdfs:label "Mutualiser avec les parcours" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:mutuaSrc a rdf:Property ;
+    rdfs:label "Mutualiser à partir du parcours" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:nbg a rdf:Property ;
+    rdfs:label "Nombre de groupe" ;
+    rdfs:domain o:Resource ;
+    vs:term_status "experimental" .
+
+fup8:hasIntervenant a rdf:Property ;
+    rdfs:label "hasIntervenant" ;
+    rdfs:comment "L'intervenant enseignant l'EC" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy fup8: .
+
+fup8:hasEC a rdf:Property ;
+    rdfs:label "hasEC" ;
+    rdfs:comment "L'EC enseignée" ;
+    rdfs:domain o:Resource ;
+    rdfs:isDefinedBy fup8: .
