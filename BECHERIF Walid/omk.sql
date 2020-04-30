@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Structure de la table `api_key`
 --
+CREATE SCHEMA IF NOT EXISTS `omekas_s1` DEFAULT CHARACTER SET utf8 ;
+USE `omekas_s1` ;
 
 CREATE TABLE `api_key` (
   `id` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -42,6 +44,8 @@ CREATE TABLE `api_key` (
 --
 -- Structure de la table `asset`
 --
+CREATE SCHEMA IF NOT EXISTS `mydb1` DEFAULT CHARACTER SET utf8 ;
+USE `mydb1` ;
 
 CREATE TABLE `asset` (
   `id` int(11) NOT NULL,
