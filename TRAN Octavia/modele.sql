@@ -28,7 +28,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Especes` (
   `nom` VARCHAR(45) NOT NULL,
   `description` LONGTEXT NULL,
   PRIMARY KEY (`id_espece`),
-  UNIQUE INDEX `id_especes_UNIQUE` (`id_espece` ASC) VISIBLE)
+  UNIQUE INDEX `id_especes_UNIQUE` (`id_espece` ASC)
+  )
 ENGINE = InnoDB;
 
 
@@ -42,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Secteurs` (
   `nom` VARCHAR(45) NOT NULL,
   `description` LONGTEXT NULL,
   PRIMARY KEY (`id_secteur`),
-  UNIQUE INDEX `id_secteur_UNIQUE` (`id_secteur` ASC) VISIBLE)
+  UNIQUE INDEX `id_secteur_UNIQUE` (`id_secteur` ASC) )
 ENGINE = InnoDB;
 
 
@@ -57,8 +58,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Enclos` (
   `Animaux_id_animal` INT NOT NULL,
   `Secteurs_id_secteur` INT NOT NULL,
   PRIMARY KEY (`id_enclos`, `Animaux_id_animal`, `Secteurs_id_secteur`),
-  UNIQUE INDEX `id_enclos_UNIQUE` (`id_enclos` ASC) VISIBLE,
-  INDEX `fk_Enclos_Secteurs1_idx` (`Secteurs_id_secteur` ASC) VISIBLE,
+  UNIQUE INDEX `id_enclos_UNIQUE` (`id_enclos` ASC) ,
+  INDEX `fk_Enclos_Secteurs1_idx` (`Secteurs_id_secteur` ASC) ,
   CONSTRAINT `fk_Enclos_Secteurs1`
     FOREIGN KEY (`Secteurs_id_secteur`)
     REFERENCES `mydb`.`Secteurs` (`id_secteur`)
@@ -77,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Zoos` (
   `nom` VARCHAR(45) NOT NULL,
   `pays` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_zoo`),
-  UNIQUE INDEX `id_zoo_UNIQUE` (`id_zoo` ASC) VISIBLE)
+  UNIQUE INDEX `id_zoo_UNIQUE` (`id_zoo` ASC) )
 ENGINE = InnoDB;
 
 
@@ -97,11 +98,11 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Animaux` (
   `Zoos_id_zoo_origine` INT NOT NULL,
   `Zoos_id_zoo_courant` INT NOT NULL,
   PRIMARY KEY (`id_animal`, `Especes_id_espece`),
-  UNIQUE INDEX `id_animal_UNIQUE` (`id_animal` ASC) VISIBLE,
-  INDEX `fk_Animaux_Especes1_idx` (`Especes_id_espece` ASC) VISIBLE,
-  INDEX `fk_Animaux_Enclos1_idx` (`Enclos_id_enclos1` ASC) VISIBLE,
-  INDEX `fk_Animaux_Zoos2_idx` (`Zoos_id_zoo_origine` ASC) VISIBLE,
-  INDEX `fk_Animaux_Zoos1_idx` (`Zoos_id_zoo_courant` ASC) VISIBLE,
+  UNIQUE INDEX `id_animal_UNIQUE` (`id_animal` ASC) ,
+  INDEX `fk_Animaux_Especes1_idx` (`Especes_id_espece` ASC) ,
+  INDEX `fk_Animaux_Enclos1_idx` (`Enclos_id_enclos1` ASC) ,
+  INDEX `fk_Animaux_Zoos2_idx` (`Zoos_id_zoo_origine` ASC) ,
+  INDEX `fk_Animaux_Zoos1_idx` (`Zoos_id_zoo_courant` ASC) ,
   CONSTRAINT `fk_Animaux_Especes1`
     FOREIGN KEY (`Especes_id_espece`)
     REFERENCES `mydb`.`Especes` (`id_espece`)
@@ -137,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Soignants` (
   `date_recrutement` DATE NOT NULL,
   `date_expiration` DATE NULL,
   PRIMARY KEY (`id_soignant`),
-  UNIQUE INDEX `id_soignant_UNIQUE` (`id_soignant` ASC) VISIBLE)
+  UNIQUE INDEX `id_soignant_UNIQUE` (`id_soignant` ASC) )
 ENGINE = InnoDB;
 
 
@@ -150,8 +151,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Soignants_has_Animaux` (
   `Soignants_id_soignant` INT NOT NULL,
   `Animaux_id_animal` INT NOT NULL,
   PRIMARY KEY (`Soignants_id_soignant`, `Animaux_id_animal`),
-  INDEX `fk_Soignants_has_Animaux_Animaux1_idx` (`Animaux_id_animal` ASC) VISIBLE,
-  INDEX `fk_Soignants_has_Animaux_Soignants1_idx` (`Soignants_id_soignant` ASC) VISIBLE,
+  INDEX `fk_Soignants_has_Animaux_Animaux1_idx` (`Animaux_id_animal` ASC) ,
+  INDEX `fk_Soignants_has_Animaux_Soignants1_idx` (`Soignants_id_soignant` ASC) ,
   CONSTRAINT `fk_Soignants_has_Animaux_Soignants1`
     FOREIGN KEY (`Soignants_id_soignant`)
     REFERENCES `mydb`.`Soignants` (`id_soignant`)
