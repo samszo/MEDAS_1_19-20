@@ -21,82 +21,82 @@ logement:agent_immatriculation a rdfs:rh ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_contrat_date_debut a rdf:rh ;
+logement:agent_contrat_date_debut a rdfs:rh ;
     rdfs:label "agent_contrat_date_debut" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_situation_famille a rdf:rh ;
+logement:agent_situation_famille a rdfs:rh ;
     rdfs:label "agent_situation_famille" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_conjoint_id a rdf:rh ;
+logement:agent_conjoint_id a rdfs:rh ;
     rdfs:label "agent_conjoint_id" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_lpu_insee a rdf:rh;
+logement:agent_lpu_insee a rdfs:rh;
     rdfs:label "agent_lpu_insee" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_type_contrat a rdf:rh ;
+logement:agent_type_contrat a rdfs:rh ;
     rdfs:label "agent_type_contrat" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_college a rdf:rh ;
+logement:agent_college a rdfs:rh ;
     rdfs:label "agent_college" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_famille_metier a rdf:rh ;
+logement:agent_famille_metier a rdfs:rh ;
     rdfs:label "agent_famille_metier" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:agent_adresse_insee a rdf:rh ;
+logement:agent_adresse_insee a rdfs:rh ;
     rdfs:label "agent_adresse_insee" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
     
-logement:agent_logement_code a rdf:rh ;
+logement:agent_logement_code a rdfs:rh ;
     rdfs:label "agent_logement_code" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
     
-logement:enf_moins_18 a rdf:rh ;
+logement:enf_moins_18 a rdfs:rh ;
     rdfs:label "enf_moins_18" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:enf_18_23 a rdf:rh ;
+logement:enf_18_23 a rdfs:rh ;
     rdfs:label "enf_18_23" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:enf_plus_23 a rdf:rh ;
+logement:enf_plus_23 a rdfs:rh ;
     rdfs:label "enf_plus_23" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:remu_2018 a rdf:rh ;
+logement:remu_2018 a rdfs:rh ;
     rdfs:label "remu_2018" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:remu_2019 a rdf:rh ;
+logement:remu_2019 a rdfs:rh ;
     rdfs:label "remu_2019" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:remu_2020 a rdf:rh ;
+logement:remu_2020 a rdfs:rh ;
     rdfs:label "remu_2020" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-logement:remu_2021 a rdf:rh ;
+logement:remu_2021 a rdfs:rh ;
     rdfs:label "remu_2021" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
