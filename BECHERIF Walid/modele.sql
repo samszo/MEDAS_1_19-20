@@ -62,7 +62,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`CatalogeFournisseur` (
   `Fournisseurs_NumFournisseur` INT NOT NULL,
   PRIMARY KEY (`Fournisseurs_NumFournisseur`),
-  INDEX `fk_Produits_has_Fournisseurs_Fournisseurs1_idx` (`Fournisseurs_NumFournisseur` ASC) VISIBLE,
+  INDEX `fk_Produits_has_Fournisseurs_Fournisseurs1_idx` (`Fournisseurs_NumFournisseur` ASC) ,
   CONSTRAINT `fk_Produits_has_Fournisseurs_Fournisseurs1`
     FOREIGN KEY (`Fournisseurs_NumFournisseur`)
     REFERENCES `mydb`.`Fournisseurs` (`NumFournisseur`)
@@ -83,8 +83,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Produits` (
   `Produits_has_Catégorie_Catégorie_NumCategorie` INT NOT NULL,
   `CatalogeFournisseur_Fournisseurs_NumFournisseur` INT NOT NULL,
   PRIMARY KEY (`NumProduit`, `Produits_has_Catégorie_Catégorie_NumCategorie`),
-  INDEX `fk_Produits_Produits_has_Catégorie1_idx` (`Produits_has_Catégorie_Catégorie_NumCategorie` ASC) VISIBLE,
-  INDEX `fk_Produits_CatalogeFournisseur1_idx` (`CatalogeFournisseur_Fournisseurs_NumFournisseur` ASC) VISIBLE,
+  INDEX `fk_Produits_Produits_has_Catégorie1_idx` (`Produits_has_Catégorie_Catégorie_NumCategorie` ASC) ,
+  INDEX `fk_Produits_CatalogeFournisseur1_idx` (`CatalogeFournisseur_Fournisseurs_NumFournisseur` ASC) ,
   CONSTRAINT `fk_Produits_Produits_has_Catégorie1`
     FOREIGN KEY (`Produits_has_Catégorie_Catégorie_NumCategorie`)
     REFERENCES `mydb`.`Produits_has_Catégorie` (`Catégorie_NumCategorie`)
@@ -113,7 +113,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`Detail_commande` (
   `Produits_NumProduit` INT NOT NULL,
   PRIMARY KEY (`Produits_NumProduit`),
-  INDEX `fk_Commandes_has_Produits_Produits1_idx` (`Produits_NumProduit` ASC) VISIBLE,
+  INDEX `fk_Commandes_has_Produits_Produits1_idx` (`Produits_NumProduit` ASC) ,
   CONSTRAINT `fk_Commandes_has_Produits_Produits1`
     FOREIGN KEY (`Produits_NumProduit`)
     REFERENCES `mydb`.`Produits` (`NumProduit`)
@@ -134,8 +134,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Commandes` (
   `Commandes_has_Salarie_Salarie_NumSalarie` INT NOT NULL,
   `Detail_commande_Produits_NumProduit` INT NOT NULL,
   PRIMARY KEY (`NumCommandes`, `Commandes_has_Salarie_Salarie_NumSalarie`, `Detail_commande_Produits_NumProduit`),
-  INDEX `fk_Commandes_Commandes_has_Salarie1_idx` (`Commandes_has_Salarie_Salarie_NumSalarie` ASC) VISIBLE,
-  INDEX `fk_Commandes_Detail_commande1_idx` (`Detail_commande_Produits_NumProduit` ASC) VISIBLE,
+  INDEX `fk_Commandes_Commandes_has_Salarie1_idx` (`Commandes_has_Salarie_Salarie_NumSalarie` ASC) ,
+  INDEX `fk_Commandes_Detail_commande1_idx` (`Detail_commande_Produits_NumProduit` ASC) ,
   CONSTRAINT `fk_Commandes_Commandes_has_Salarie1`
     FOREIGN KEY (`Commandes_has_Salarie_Salarie_NumSalarie`)
     REFERENCES `mydb`.`Commandes_has_Salarie` (`Salarie_NumSalarie`)
@@ -157,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Catégorie` (
   `DescriptionCategorie` VARCHAR(45) NULL,
   `Produits_has_Catégorie_Catégorie_NumCategorie` INT NOT NULL,
   PRIMARY KEY (`NumCategorie`),
-  INDEX `fk_Catégorie_Produits_has_Catégorie1_idx` (`Produits_has_Catégorie_Catégorie_NumCategorie` ASC) VISIBLE,
+  INDEX `fk_Catégorie_Produits_has_Catégorie1_idx` (`Produits_has_Catégorie_Catégorie_NumCategorie` ASC) ,
   CONSTRAINT `fk_Catégorie_Produits_has_Catégorie1`
     FOREIGN KEY (`Produits_has_Catégorie_Catégorie_NumCategorie`)
     REFERENCES `mydb`.`Produits_has_Catégorie` (`Catégorie_NumCategorie`)
@@ -174,8 +174,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Passer` (
   `Commandes_NumCommandes` INT NOT NULL,
   `Commandes_Commandes_has_Salarie_Salarie_NumSalarie` INT NOT NULL,
   PRIMARY KEY (`Client_NumClient`),
-  INDEX `fk_Client_has_Commandes_Client_idx` (`Client_NumClient` ASC) VISIBLE,
-  INDEX `fk_Passer_Commandes1_idx` (`Commandes_NumCommandes` ASC, `Commandes_Commandes_has_Salarie_Salarie_NumSalarie` ASC) VISIBLE,
+  INDEX `fk_Client_has_Commandes_Client_idx` (`Client_NumClient` ASC) ,
+  INDEX `fk_Passer_Commandes1_idx` (`Commandes_NumCommandes` ASC, `Commandes_Commandes_has_Salarie_Salarie_NumSalarie` ASC) ,
   CONSTRAINT `fk_Client_has_Commandes_Client`
     FOREIGN KEY (`Client_NumClient`)
     REFERENCES `mydb`.`Client` (`NumClient`)
@@ -201,7 +201,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Salarie` (
   `TelephoneSalarie` VARCHAR(45) NULL,
   `Commandes_has_Salarie_Salarie_NumSalarie` INT NOT NULL,
   PRIMARY KEY (`NumSalarie`, `Commandes_has_Salarie_Salarie_NumSalarie`),
-  INDEX `fk_Salarie_Commandes_has_Salarie1_idx` (`Commandes_has_Salarie_Salarie_NumSalarie` ASC) VISIBLE,
+  INDEX `fk_Salarie_Commandes_has_Salarie1_idx` (`Commandes_has_Salarie_Salarie_NumSalarie` ASC) ,
   CONSTRAINT `fk_Salarie_Commandes_has_Salarie1`
     FOREIGN KEY (`Commandes_has_Salarie_Salarie_NumSalarie`)
     REFERENCES `mydb`.`Commandes_has_Salarie` (`Salarie_NumSalarie`)
