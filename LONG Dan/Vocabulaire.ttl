@@ -4,10 +4,10 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix o: <http://omeka.org/s/vocabs/o#> .
-@prefix Foot: <https://foot.com> .
+@prefix Foot: <https://foot.com/foot#> .
 
 
-<https://foot.com> a owl:Ontology ;
+<https://foot.com/foot#> a owl:Ontology ;
     dcterms:title "Vainqueur de la Ligue des Champions" .
 
 Foot:Equipe a rdfs:Class ;
