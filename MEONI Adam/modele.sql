@@ -22,11 +22,11 @@ USE `mydb` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Eleves` (
   `idEleves` INT NOT NULL,
-  `Nom` CHAR(500) NULL,
-  `Prenom` CHAR(500) NULL,
-  `Adresse` CHAR(500) NULL,
+  `Nom` CHAR(255) NULL,
+  `Prenom` CHAR(255) NULL,
+  `Adresse` CHAR(255) NULL,
   `CP` INT(5) NULL,
-  `Ville` CHAR(500) NULL,
+  `Ville` CHAR(255) NULL,
   PRIMARY KEY (`idEleves`))
 ENGINE = InnoDB;
 
@@ -36,8 +36,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Moniteur` (
   `idMoniteur` INT NOT NULL,
-  `Nom_moniteur` CHAR(500) NULL,
-  `Prenom_moniteur` CHAR(500) NULL,
+  `Nom_moniteur` CHAR(255) NULL,
+  `Prenom_moniteur` CHAR(255) NULL,
   `Date_naissance` DATE NULL,
   `Sexe` CHAR(1) NULL,
   PRIMARY KEY (`idMoniteur`))
