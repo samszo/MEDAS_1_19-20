@@ -20,7 +20,7 @@ Foot:Pays a rdfs:Class ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
 
-Foot:Edition rdfs:Class ;
+Foot:Edition a rdfs:Class ;
     rdfs:label "Edition" ;
     rdfs:domain o:Resource ;
     vs:term_status "experimental" .
