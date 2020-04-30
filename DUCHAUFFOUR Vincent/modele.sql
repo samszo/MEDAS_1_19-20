@@ -21,7 +21,7 @@ USE `mydb` ;
 -- Table `mydb`.`Patient`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`Patient` (
-  `id` VARCHAR(16) NULL,
+  `id` VARCHAR(16) NOT NULL,
   `nom` VARCHAR(255) NULL,
   `prenom` VARCHAR(255) NULL,
   `email` VARCHAR(255) NULL,
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`medicaments` (
 CREATE TABLE IF NOT EXISTS `mydb`.`prescription` (
   `id` VARCHAR(16) NOT NULL,
   `medicaments_id` VARCHAR(16) NOT NULL,
-  INDEX `fk_prescription_medicaments1_idx` (`medicaments_id` ASC) VISIBLE,
+  INDEX `fk_prescription_medicaments1_idx` (`medicaments_id` ASC) ,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_prescription_medicaments1`
     FOREIGN KEY (`medicaments_id`)
@@ -102,9 +102,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`consultation` (
   `Docteur_id` VARCHAR(16) NOT NULL,
   `prescription_id` VARCHAR(16) NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_consultation_Patient1_idx` (`Patient_id` ASC) VISIBLE,
-  INDEX `fk_consultation_Docteur1_idx` (`Docteur_id` ASC) VISIBLE,
-  INDEX `fk_consultation_prescription1_idx` (`prescription_id` ASC) VISIBLE,
+  INDEX `fk_consultation_Patient1_idx` (`Patient_id` ASC) ,
+  INDEX `fk_consultation_Docteur1_idx` (`Docteur_id` ASC) ,
+  INDEX `fk_consultation_prescription1_idx` (`prescription_id` ASC) ,
   CONSTRAINT `fk_consultation_Patient1`
     FOREIGN KEY (`Patient_id`)
     REFERENCES `mydb`.`Patient` (`id`)
