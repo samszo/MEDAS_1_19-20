@@ -1,0 +1,67 @@
+rdfs:label Hospital
+http://purl.obolibrary.org/obo/IAO_0000112 Definition take from: http://dictionary.reference.com/browse/hospital.
+localName Hospital
+dbpedia-owl:Hospital(dbpedia-owl)0.556
+n/a (use in LOD)
+http://dbpedia.org/ontology/Hospital
+rdfs:label hospital @pt
+rdfs:label hospital @en
+localName Hospital
+lgdo:BuildingHospital(lgdo)0.556
+n/a (use in LOD)
+http://linkedgeodata.org/ontology/BuildingHospital
+rdfs:label Hospital @pt-br
+rdfs:label Bangunan Hospital @ms
+rdfs:label Hospital @ast
+rdfs:label Gusali ng Hospital @tl
+rdfs:label Hospital Building @en-gb
+localName BuildingHospital
+schema:Hospital(schema)0.556
+n/a (use in LOD)
+http://schema.org/Hospital
+rdfs:comment A hospital.
+rdfs:label Hospital
+localName Hospital
+lgdo:Hospital(lgdo)0.509
+n/a (use in LOD)
+http://linkedgeodata.org/ontology/Hospital
+rdfs:label Hospital @pt-br
+rdfs:label Hospital @ms
+rdfs:label Hospital @pt
+rdfs:label Hospital @gl
+rdfs:label Hospital @ast
+rdfs:label Hospital @ia
+rdfs:label Hospital @es
+rdfs:label Hospital @ca
+rdfs:label Hospital @en-gb
+localName Hospital
+pext:Hospital(pext)0.509
+n/a (use in LOD)
+http://www.ontotext.com/proton/protonext#Hospital
+rdfs:label Hospital @en
+rdfs:comment Any Hospital, a building which is a hospital. @en
+localName Hospital
+obo:OBI_0000844(obo)0.495
+n/a (use in LOD)
+http://purl.obolibrary.org/obo/OBI_0000844
+http://purl.obolibrary.org/obo/IAO_0000119 http://www.golovchenko.org/cgi-bin/wnsearch?q=hospital#2n
+rdfs:label hospital
+http://purl.obolibrary.org/obo/IAO_0000112 Ethics Committee and the Royal Hobart Hospital Research
+http://purl.obolibrary.org/obo/IAO_0000111 hospital
+hosp:Hospital(hosp)0.494
+n/a (use in LOD)
+http://health.data.gov/def/hospital/Hospital
+vocabulary.dcterms:title Hospital Vocabulary @en
+vocabulary.dcterms:description A RDF Schema that defines concepts and relationships used for Hospital data. @en
+rdfs:label Hospital
+localName Hospital
+hosp:cacProvider(hosp)0.318
+n/a (use in LOD)
+http://health.data.gov/def/hospital/cacProvider
+vocabulary.dcterms:title Hospital Vocabulary @en
+vocabulary.dcterms:description A RDF Schema that defines concepts and relationships used for Hospital data. @en
+km4c:Public_hospital(km4c)0.309
+n/a (use in LOD)
+http://www.disit.org/km4city/schema#Public_hospital
+rdfs:label Public hospital @en
+localName Public_hospital
