@@ -5,9 +5,6 @@ author: |
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## Les données logement
 Actuellement en alternance à la SNCF, j'exerce en tant qu'analyste de données des demandes de logement des salariés. 
