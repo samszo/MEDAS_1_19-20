@@ -20,10 +20,7 @@ Toutefois la variété des sources de données et la finalité de mon service re
 Pour commencer je me base sur les données des ressources humaines afin de situer nos bassins d'emplois et par la suite proposer une offre qui colle, d'une part, avec  sa demande (nombre de pièces, nombre de personnes à loger, Rez-de-chaussée ou non, loyer maximum supportable...) et son lieu de travail et d'autres part avec ses revenus et sa composition familiale. 
 
 ## La base des ressources humaines
-```{r}
-rhumb <- read.csv("C:/Users/Belounis/Desktop/MEDAS/M1/Projet BDD/rhumb.csv")
-names(rhumb)
-```
+
 La base RH est composée de plusieurs variables relatives à la situation del'agent, de fait cette base de données n'est pas exhaustive. Sont présentées ci-dessus les variables qui nous intéressent, d'un côté les variables géographiques nous permettant de situer les lieux d'emploi et les lieux d'habitats des agents. De l'autre côté on a besoin de connaître sa situation personnelle dont la situation conjugale et le nombre d'enfants mais également sa rémunération afin de proposer des offres qui collent avec ces caractéristiques.
 
 Cependant tous les agents ne font pas de demandes de logements, certains en font la demande car ils souhaitent emménager avec leur conjoint ou attendent la venue d'un nouveau né et d'autres rencontrent des problèmes pour se loger essentiellement en île-de-France où le marché de l'immobilier est saturé.
@@ -31,10 +28,7 @@ Cependant tous les agents ne font pas de demandes de logements, certains en font
 
 ## La base des demandes de logements
 
-```{r}
-poc <-  read.csv2("C:/Users/Belounis/Desktop/MEDAS/M1/Projet BDD/Classeur2.csv", encoding="UTF-8")
-names(poc)
-```
+
 La base des demandes de logements est quant à elle beaucoup plus riches en information ce qui est dû aux nombreux souhaits que les demandeurs peuvent faire. Le demandeur fourni ses souhaits concernants la ou les commune(s) où il souhaite loger avec d'autres caractéristiques telles que le montant maximum alloué à la location du logement, le nombre de pièces etc ... Il existe également des agents qui font des demandes mais qui ne sont pas dans l'urgence, ils souhaitent déménnager plus par changement que par nécessité, cela on les appelle les demandes coup de coeurs. A chaque demandeur est attribué une "note" qu'on nomme cotation pour juger du caractère urgent ou non de la situation du demandeur. Ainsi un demandeur faisant une demande coup de coeur ne sera pas prioritaire face à un demandeur attendant un enfant et dont la surface actuelle de ce logement ne lui permet pas d'accueillir ce dernier. 
 
 Une autre complexité vient s'ajouter au modèle. Le service propose des logements à loyer intermédiaire (LLI) visant à loger des personnes qui n'auraient pas assez pour se loger dans le privée mais également trop pour postuler à un logement social, ces personnes ont des difficultés à se loger du fait de ce paradoxe puisqu'ils se situent dans l'entre-deux.
@@ -46,7 +40,6 @@ Premièrement il faut identifier la zone de la commune souhaitée, puis la compo
 Sachant que les demandeurs peuvent émettre jusqu'à 10 souhaits en ce qui concerne la commune, il faut créer cette variable LLI autant qu'il y a de communes souhaitées. 
  
 
-![](C:/Users/Belounis/Desktop/MEDAS/M1/Projet BDD/modèle.png)
 
 
 
