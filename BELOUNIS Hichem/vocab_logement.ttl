@@ -1,0 +1,219 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix o: <http://omeka.org/s/vocabs/o#> .
+@prefix logement: <https://vocabulaire_hichem> .
+
+<https://vocabulaire_hichem> a owl:Ontology.
+
+
+logement:RH a rdfs:Class ;
+rdfs:label "RH" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_id a rdf:Property ;
+rdfs:label "agent_id" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_immatriculation a rdf:Property ;
+rdfs:label "agent_immatriculation" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_contrat_date_debut a rdf:Property ;
+rdfs:label "agent_contrat_date_debut" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_situation_famille a rdf:Property ;
+rdfs:label "agent_situation_famille" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_conjoint_id a rdf:Property ;
+rdfs:label "agent_conjoint_id" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_lpu_insee a rdf:Property;
+rdfs:label "agent_lpu_insee" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_type_contrat a rdf:Property ;
+rdfs:label "agent_type_contrat" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_college a rdf:Property;
+rdfs:label "agent_college" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_famille_metier a rdf:Property ;
+rdfs:label "agent_famille_metier" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_adresse_insee a rdf:Property ;
+rdfs:label "agent_adresse_insee" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:agent_logement_code a rdf:Property ;
+rdfs:label "agent_logement_code" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:enf_moins_18 a rdf:Property;
+rdfs:label "enf_moins_18" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:enf_18_23 a rdf:Property ;
+rdfs:label "enf_18_23" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:enf_plus_23 a rdf:Property;
+rdfs:label "enf_plus_23" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:remu_2018 a rdf:Property ;
+rdfs:label "remu_2018" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:remu_2019 a rdf:Property;
+rdfs:label "remu_2019" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:remu_2020 a rdf:Property ;
+rdfs:label "remu_2020" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:remu_2021 a rdf:Property ;
+rdfs:label "remu_2021" ;
+rdfs:domain o:Resource ;
+vs:term_status "experimental" .
+
+logement:DEMANDES a rdfs:Class;
+rdfs:label "DEMANDES";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:id_demande a rdf:Property;
+rdfs:label "id_demande";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:agent_id a rdf:Property;
+rdfs:label "agent_id";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:date_depot a rdf:Property;
+rdfs:label "date_depot";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:date_validation a rdf:Property;
+rdfs:label "date_validation";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:nb_personnes_loger a rdf:Property;
+rdfs:label "nb_personnes_loger";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:type_1_logement a rdf:Property;
+rdfs:label "type_1_logement";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:type_2_logement a rdf:Property;
+rdfs:label "type_2_logement";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:code_insee_1commune_souhait a rdf:Property;
+rdfs:label "code_insee_1commune_souhait";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:code_insee_2commune_souhait a rdf:Property;
+rdfs:label "code_insee_2commune_souhait";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:code_insee_3commune_souhait a rdf:Property;
+rdfs:label "code_insee_3commune_souhait";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:code_insee_4commune_souhait a rdf:Property;
+rdfs:label "code_insee_4commune_souhait";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:code_insee_5commune_souhait a rdf:Property;
+rdfs:label "code_insee_5commune_souhait";
+rdfs:domain o:Ressource;
+vs:term_status "experimental" .
+
+logement:code_insee_6commune_souhait a rdf:Property;
+rdfs:label "code_insee_6commune_souhait" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:code_insee_7commune_souhait a rdf:Property;
+rdfs:label "code_insee_7commune_souhait" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:motif_demande a rdf:Property;
+rdfs:label "motif_demande" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:statut_logement_actuel a rdf:Property;
+rdfs:label "statut_logement_actuel" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:montant_max_logement a rdf:Property;
+rdfs:label "montant_max_logement" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:exclusion_etage a rdf:Property;
+rdfs:label "exclusion_etage" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:exclusion_rdc a rdf:Property;
+rdfs:label "exclusion_rdc" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:nb_chambres a rdf:Property;
+rdfs:label "nb_chambres" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:ascenseur a rdf:Property;
+rdfs:label "ascenseur" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
+
+logement:cotation a rdf:Property ;
+rdfs:label "cotation" ;
+rdfs:domain o:Resource ;
+rdfs:isDefinedBy logement: .
