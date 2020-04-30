@@ -46,8 +46,8 @@ CREATE TABLE IF NOT EXISTS `modele`.`articles_categories` (
   `articles_idarticles` INT NOT NULL,
   `categories_idcategories` INT NOT NULL,
   PRIMARY KEY (`articles_idarticles`, `categories_idcategories`),
-  INDEX `fk_articles_has_categories_categories1_idx` (`categories_idcategories` ASC) VISIBLE,
-  INDEX `fk_articles_has_categories_articles_idx` (`articles_idarticles` ASC) VISIBLE,
+  INDEX `fk_articles_has_categories_categories1_idx` (`categories_idcategories` ASC) ,
+  INDEX `fk_articles_has_categories_articles_idx` (`articles_idarticles` ASC) ,
   CONSTRAINT `fk_articles_has_categories_articles`
     FOREIGN KEY (`articles_idarticles`)
     REFERENCES `modele`.`articles` (`idarticles`)
@@ -78,8 +78,8 @@ CREATE TABLE IF NOT EXISTS `modele`.`articles_tags` (
   `articles_idarticles` INT NOT NULL,
   `tags_idtags` INT NOT NULL,
   PRIMARY KEY (`articles_idarticles`, `tags_idtags`),
-  INDEX `fk_articles_has_tags_tags1_idx` (`tags_idtags` ASC) VISIBLE,
-  INDEX `fk_articles_has_tags_articles1_idx` (`articles_idarticles` ASC) VISIBLE,
+  INDEX `fk_articles_has_tags_tags1_idx` (`tags_idtags` ASC) ,
+  INDEX `fk_articles_has_tags_articles1_idx` (`articles_idarticles` ASC) ,
   CONSTRAINT `fk_articles_has_tags_articles1`
     FOREIGN KEY (`articles_idarticles`)
     REFERENCES `modele`.`articles` (`idarticles`)
@@ -104,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `modele`.`commentaires` (
   `contenu` LONGTEXT NULL,
   `articles_idarticles` INT NOT NULL,
   PRIMARY KEY (`idcommentaires`),
-  INDEX `fk_commentaires_articles1_idx` (`articles_idarticles` ASC) VISIBLE,
+  INDEX `fk_commentaires_articles1_idx` (`articles_idarticles` ASC) ,
   CONSTRAINT `fk_commentaires_articles1`
     FOREIGN KEY (`articles_idarticles`)
     REFERENCES `modele`.`articles` (`idarticles`)
