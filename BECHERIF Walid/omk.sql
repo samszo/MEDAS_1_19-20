@@ -44,8 +44,7 @@ CREATE TABLE `api_key` (
 --
 -- Structure de la table `asset`
 --
-CREATE SCHEMA IF NOT EXISTS `mydb1` DEFAULT CHARACTER SET utf8 ;
-USE `mydb1` ;
+
 
 CREATE TABLE `asset` (
   `id` int(11) NOT NULL,
