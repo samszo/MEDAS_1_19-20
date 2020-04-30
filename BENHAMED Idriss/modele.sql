@@ -50,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Processeur` (
   `Modele` VARCHAR(45) NULL,
   `Socket_idSocket` INT NOT NULL,
   PRIMARY KEY (`Numero de serie`, `Socket_idSocket`),
-  INDEX `fk_Processeur_Socket_idx` (`Socket_idSocket` ASC) VISIBLE,
+  INDEX `fk_Processeur_Socket_idx` (`Socket_idSocket` ASC) ,
   CONSTRAINT `fk_Processeur_Socket`
     FOREIGN KEY (`Socket_idSocket`)
     REFERENCES `mydb`.`Socket` (`idSocket`)
@@ -74,9 +74,9 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Carte Mere` (
   `Processeur_Numero de serie` INT NOT NULL,
   `Processeur_Socket_idSocket` INT NOT NULL,
   PRIMARY KEY (`Numero de serie`, `Socket_idSocket`, `Chassis_Numero de serie`, `Processeur_Numero de serie`, `Processeur_Socket_idSocket`),
-  INDEX `fk_Carte Mere_Socket1_idx` (`Socket_idSocket` ASC) VISIBLE,
-  INDEX `fk_Carte Mere_Chassis1_idx` (`Chassis_Numero de serie` ASC) VISIBLE,
-  INDEX `fk_Carte Mere_Processeur1_idx` (`Processeur_Numero de serie` ASC, `Processeur_Socket_idSocket` ASC) VISIBLE,
+  INDEX `fk_Carte Mere_Socket1_idx` (`Socket_idSocket` ASC) ,
+  INDEX `fk_Carte Mere_Chassis1_idx` (`Chassis_Numero de serie` ASC) ,
+  INDEX `fk_Carte Mere_Processeur1_idx` (`Processeur_Numero de serie` ASC, `Processeur_Socket_idSocket` ASC) ,
   CONSTRAINT `fk_Carte Mere_Socket1`
     FOREIGN KEY (`Socket_idSocket`)
     REFERENCES `mydb`.`Socket` (`idSocket`)
@@ -150,8 +150,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Carte Mere_has_Carte Graphique` (
   `Carte Mere_Numero de serie` INT NOT NULL,
   `Carte Graphique_Numero de serie` INT NOT NULL,
   PRIMARY KEY (`Carte Mere_Numero de serie`, `Carte Graphique_Numero de serie`),
-  INDEX `fk_Carte Mere_has_Carte Graphique_Carte Graphique1_idx` (`Carte Graphique_Numero de serie` ASC) VISIBLE,
-  INDEX `fk_Carte Mere_has_Carte Graphique_Carte Mere1_idx` (`Carte Mere_Numero de serie` ASC) VISIBLE,
+  INDEX `fk_Carte Mere_has_Carte Graphique_Carte Graphique1_idx` (`Carte Graphique_Numero de serie` ASC) ,
+  INDEX `fk_Carte Mere_has_Carte Graphique_Carte Mere1_idx` (`Carte Mere_Numero de serie` ASC) ,
   CONSTRAINT `fk_Carte Mere_has_Carte Graphique_Carte Mere1`
     FOREIGN KEY (`Carte Mere_Numero de serie`)
     REFERENCES `mydb`.`Carte Mere` (`Numero de serie`)
@@ -172,8 +172,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Carte Mere_has_Barette de RAM` (
   `Carte Mere_Numero de serie` INT NOT NULL,
   `Barette de RAM_Numero de serie` INT NOT NULL,
   PRIMARY KEY (`Carte Mere_Numero de serie`, `Barette de RAM_Numero de serie`),
-  INDEX `fk_Carte Mere_has_Barette de RAM_Barette de RAM1_idx` (`Barette de RAM_Numero de serie` ASC) VISIBLE,
-  INDEX `fk_Carte Mere_has_Barette de RAM_Carte Mere1_idx` (`Carte Mere_Numero de serie` ASC) VISIBLE,
+  INDEX `fk_Carte Mere_has_Barette de RAM_Barette de RAM1_idx` (`Barette de RAM_Numero de serie` ASC) ,
+  INDEX `fk_Carte Mere_has_Barette de RAM_Carte Mere1_idx` (`Carte Mere_Numero de serie` ASC) ,
   CONSTRAINT `fk_Carte Mere_has_Barette de RAM_Carte Mere1`
     FOREIGN KEY (`Carte Mere_Numero de serie`)
     REFERENCES `mydb`.`Carte Mere` (`Numero de serie`)
@@ -194,8 +194,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Chassis_has_Ventilateur` (
   `Chassis_Numero de serie` INT NOT NULL,
   `Ventilateur_numeros de serie` INT NOT NULL,
   PRIMARY KEY (`Chassis_Numero de serie`, `Ventilateur_numeros de serie`),
-  INDEX `fk_Chassis_has_Ventilateur_Ventilateur1_idx` (`Ventilateur_numeros de serie` ASC) VISIBLE,
-  INDEX `fk_Chassis_has_Ventilateur_Chassis1_idx` (`Chassis_Numero de serie` ASC) VISIBLE,
+  INDEX `fk_Chassis_has_Ventilateur_Ventilateur1_idx` (`Ventilateur_numeros de serie` ASC) ,
+  INDEX `fk_Chassis_has_Ventilateur_Chassis1_idx` (`Chassis_Numero de serie` ASC) ,
   CONSTRAINT `fk_Chassis_has_Ventilateur_Chassis1`
     FOREIGN KEY (`Chassis_Numero de serie`)
     REFERENCES `mydb`.`Chassis` (`Numero de serie`)
@@ -216,8 +216,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Radiateur_has_Socket` (
   `Radiateur_Numero de serie` INT NOT NULL,
   `Socket_idSocket` INT NOT NULL,
   PRIMARY KEY (`Radiateur_Numero de serie`, `Socket_idSocket`),
-  INDEX `fk_Radiateur_has_Socket_Socket1_idx` (`Socket_idSocket` ASC) VISIBLE,
-  INDEX `fk_Radiateur_has_Socket_Radiateur1_idx` (`Radiateur_Numero de serie` ASC) VISIBLE,
+  INDEX `fk_Radiateur_has_Socket_Socket1_idx` (`Socket_idSocket` ASC) ,
+  INDEX `fk_Radiateur_has_Socket_Radiateur1_idx` (`Radiateur_Numero de serie` ASC) ,
   CONSTRAINT `fk_Radiateur_has_Socket_Radiateur1`
     FOREIGN KEY (`Radiateur_Numero de serie`)
     REFERENCES `mydb`.`Radiateur` (`Numero de serie`)
@@ -239,8 +239,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`Radiateur_has_Processeur` (
   `Processeur_Numero de serie` INT NOT NULL,
   `Processeur_Socket_idSocket` INT NOT NULL,
   PRIMARY KEY (`Radiateur_Numero de serie`, `Processeur_Numero de serie`, `Processeur_Socket_idSocket`),
-  INDEX `fk_Radiateur_has_Processeur_Processeur1_idx` (`Processeur_Numero de serie` ASC, `Processeur_Socket_idSocket` ASC) VISIBLE,
-  INDEX `fk_Radiateur_has_Processeur_Radiateur1_idx` (`Radiateur_Numero de serie` ASC) VISIBLE,
+  INDEX `fk_Radiateur_has_Processeur_Processeur1_idx` (`Processeur_Numero de serie` ASC, `Processeur_Socket_idSocket` ASC) ,
+  INDEX `fk_Radiateur_has_Processeur_Radiateur1_idx` (`Radiateur_Numero de serie` ASC) ,
   CONSTRAINT `fk_Radiateur_has_Processeur_Radiateur1`
     FOREIGN KEY (`Radiateur_Numero de serie`)
     REFERENCES `mydb`.`Radiateur` (`Numero de serie`)
