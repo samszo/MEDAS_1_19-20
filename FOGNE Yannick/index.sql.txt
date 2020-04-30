@@ -1,0 +1,18 @@
+
+Conexte: 
+
+Nous voulons créer deux bases de données, un pour le schéma de prise en charge des maladies dans SQL
+et un autre pour les diagnostiques avec Omeka.
+
+Notre base SQL comprend :
+- le patient qui choisi un hopital 
+- l'hopital qui crée le fichier patient avec un id unique à l'acceuil
+- le médécin crée une fiche de prise en charge
+- la comptabilité établit la facture à la fin 
+- il existe une liste de personnes ayant accès au dossier du patient
+
+Chacun de ces éléments est une table qui contient des données et il existe des relations entre elles.
+
+Il existe des clés 1:1, c'est à dire qu'un patient ne peut se retrouver que dans un
+ seul hopital à la fois; chaque patient n'a qu'une seule facture et une seule fiche de prise en charge
+n:1 Plusieurs user ont accès au dossier d'un patient 

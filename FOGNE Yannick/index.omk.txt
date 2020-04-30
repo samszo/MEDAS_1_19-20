@@ -1,0 +1,13 @@
+
+Conexte: 
+
+Nous voulons créer deux bases de données, un pour le schéma de prise en charge des maladies dans SQL
+et un autre pour les diagnostiques avec Omeka.
+
+Notre base omeka comprend :
+- Les maladies
+- les familles de maladies
+- Les symptomes
+
+Les familles de maladies sont différentes, mais elles peuvent se retrouver avec des symptômes similaires.
+Il existe donc des liens entre les familles de maladies différentes. 
