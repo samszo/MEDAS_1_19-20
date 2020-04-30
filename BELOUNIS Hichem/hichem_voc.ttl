@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix o: <http://omeka.org/s/vocabs/o#> .
-@prefix zoobd: <https://vocabulaires_hichem.fr#> .
+@prefix logement: <https://vocabulaires_hichem.fr#> .
 @prefix teach: <http://linkedscience.org/teach/ns#> .
 @prefix schema: <http://schema.org/> .
 
