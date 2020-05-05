@@ -242,8 +242,8 @@
                     html+= "<br/>Nb Auto évaluation avec un nom a évaluer valide = "+d.nbSaisiValidNPeva;
                     html+= "<br/>Nb Auto évaluation pour cet étudiant ("+d['NP']+") = "+d.nbAE;
                     //on ne prend pas en compte le nom de l'évaluateur valide
-                    //var noteRedacEval = (d.nbAEfaites + d.nbSaisiValidNP + d.nbSaisiValidNPeva)/3;
-                    var noteRedacEval = (d.nbAEfaites + d.nbSaisiValidNPeva)/2;
+                    var noteRedacEval = (d.nbAEfaites + d.nbSaisiValidNP + d.nbSaisiValidNPeva)/3;
+                    //var noteRedacEval = (d.nbAEfaites + d.nbSaisiValidNPeva)/2;
                     
                     html+= "<br/>Notes Auto évaluation des projets de l'étudiant : ";
                     var nae = 0, naeProf=0, nbAE=0;
@@ -282,7 +282,7 @@
                         }
                     })
                     var noteAEPertinence = 20/(d['pertinence totale'] / d['pertinence évaluateur']);
-                    html= '<br/>NON PRIS en COMPTE : Note Pertinence évaluation : '+d['pertinence évaluateur']+' / '+d['pertinence totale']+' = '+noteAEPertinence.toFixed(2) + html;
+                    html= '<br/>Note Pertinence évaluation : '+d['pertinence évaluateur']+' / '+d['pertinence totale']+' = '+noteAEPertinence.toFixed(2) + html;
 
                     //html+= '<br/>   Moyenne Auto évaluation : '+nae+' / '+d.nbAEprojet+' = '+nae/d.nbAEprojet;
                     var noteAEProjet = nae/nbAE;
@@ -303,16 +303,18 @@
                     noteFinale += noteAEProf;//max=20 
                     //la note de rédaction des AE
                     noteFinale += noteRedacEval;//max=20
+                    //note pertinence de l'avaluation
+                    noteFinale += noteAEPertinence;//max=20                    
 
                     //écriture de l'entête
-                    html = '<h3>'+noteFinale.toFixed(2)+' / 60 </h3>' + html;
-                    html = '<h2>Note Finale = '+(noteFinale/3).toFixed(2)+'</h2>' + html;
+                    html = '<h3>'+noteFinale.toFixed(2)+' / 80 </h3>' + html;
+                    html = '<h2>Note Finale = '+(noteFinale/4).toFixed(2)+'</h2>' + html;
                     html = '<h1>'+d['NP'].toUpperCase()+'</h1>'+ html; 
 
                     html+= '<br/><hr/><br/>';
 
                     //ajoute le resume
-                    resume = d['NP'].toUpperCase()+', '+(noteFinale/3).toFixed(2); 
+                    resume = d['NP'].toUpperCase()+', '+(noteFinale/4).toFixed(2); 
                     d3.select("#resume").append("div")
                         .html(resume);                                        
 
