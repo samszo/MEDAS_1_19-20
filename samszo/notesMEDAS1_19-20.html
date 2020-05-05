@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Samuel Szoniecky">    
+        <title>Notes des étudiants MEDAS 1 19-20</title>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/w2ui.min.js"></script>
+        <script type="text/javascript" src="js/d3.v5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/w2ui.min.css" />
+        <style>
+            .note{
+                margin-left: 10px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            .detailNote{
+                margin-left: 40px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+        </style>
+    </head>    
+<body>
+    <div id="resume"></div>
+    <div id="resultats"></div>
+    <br />
+
+    <script>
+        var dtForm, dtEtu, dtAutoEval, dtCoursEval, aeRef = [];
+        function popup() {
+            w2popup.open({
+                width: 500,
+                height: 300,
+                title: 'Récupération des données',
+                body: '<div class="w2ui-centered"></div>',
+                buttons: '',
+                showMax: false
+            });
+        }
+    
+
+        popup();
+        w2popup.lock('Merci de patienter', true);
+        var cNumEtuEval = "Nom de l'évaluateur", cGitHubEval = "NOM Prénom de l'étudiant évalué.";
+        //les auto évaluations
+        var urlAutoEval = 'EvaluationsMEDAS1_19-20.csv';
+
+        //éxécute les requête ajax
+        var files = [urlAutoEval];
+        Promise.all(files.map(url => d3.csv(url))).then(function(values) {
+            setData(values);
+        });
+
+
+        function setData(rs) {
+            dtAutoEval = rs[0];
+            dtEtu = [];
+
+            //
+            //récupère les étudiants évaluateurs
+            var aeEtu = d3.nest()
+                .key(function(d){
+                    if(d[cNumEtuEval]==1){
+                        aeRef.push(d);
+                        return 'prof';
+                    }
+                    return d[cNumEtuEval];
+                }).entries(dtAutoEval);
+            //ajoute le nombre d'évaluation fait par l'étudiant et la bonne saisie
+            aeEtu.forEach(function(ae){
+                let etu = {'NP':ae.key,'nbAEfaites':ae.values.length,'nbSaisiValidNP':0,'nbSaisiValidNPeva':0};
+                ae.values.forEach(e => {
+                    etu.nbSaisiValidNP = e[cNumEtuEval] == e['ori'+cNumEtuEval] ? etu.nbSaisiValidNP + 1 : etu.nbSaisiValidNP;
+                    etu.nbSaisiValidNPeva = e[cGitHubEval] == e['ori'+cGitHubEval] ? etu.nbSaisiValidNPeva + 1 : etu.nbSaisiValidNPeva;                    
+                })
+                dtEtu.push(etu);                   
+            });
+
+            //récupère les projets évalués
+            var aeProjet = d3.nest()
+                .key(function(d){
+                    if(d[cNumEtuEval]!=1)
+                        return d[cGitHubEval];
+                    else
+                        return 'prof';
+                }).entries(dtAutoEval);
+            //ajoute les notes pour chaque projet de chaque étudiant                  
+            aeProjet.forEach(function(ae){
+                //enregistre la note de l'étudiant
+                dtEtu.forEach(function(etu){
+                    //console.log(ae);
+                    if(etu['NP']==ae.key){
+                        //on enregistre les notes par évaluateur
+                        ae.values.forEach(function(v){
+                            //vérifie que le compte évalué existe
+                            let etuEval = dtEtu.filter(function(e){
+                                return e['NP']==v[cGitHubEval];
+                            });
+                            if(etuEval.length){
+                                calculNote(etu, v[cNumEtuEval], v);
+                                etu.nbAE = etu.nbAE ? etu.nbAE + 1 : 1;
+                            }
+                        });                            
+                    }
+
+                });
+            });
+
+            //calcul les notes du prof
+            ae = aeProjet.filter(e => e.key=='prof')[0];//récupère les projets évalué par prof
+            profEval = {'nbAEprojet':ae.values.length,'etus':[]};
+            ae.values.forEach(function(v){
+                var eva = v[cNumEtuEval];
+                profEval.etus[v[cGitHubEval]]={};
+                calculNote(profEval.etus[v[cGitHubEval]], eva, v);
+            });
+                                        
+            afficheResultats();                
+        }
+
+        function calculNote(etu, eva, v){
+
+
+
+            var k = 'Il existe un fichier index.md pour décrire le projet de base de données en markdown ?';
+            var n = v[k] == 'oui' ? 5 : 0;	
+            setNote(etu, eva, k, n, v[k]);
+            
+            k = 'Evaluer la pertinence de la description';
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Il existe un modèle de la base de donnée dans un fichier : modele.png et/ou modele.svg ?';
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Evaluer la cohérence du modèle par rapport au projet';
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Il existe un fichier modele.sql ?';
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+            
+            k = "L'importation avec PhpMyAdmin du fichier modele.sql se passe sans erreur ?";
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = "Il existe un fichier omk.sql qui est l'export de la base de données omeka s ?";
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = "L'importation du fichier omk.sql se passe sans erreur ?";
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Vous pouvez vous connecter à omeka s ?';
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Il existe un fichier : vocabulaire.ttl pour décrire le vocabulaire qui a été créé spécifiquement pour le projet base de données ?';
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+                
+            k = "L'importation de vocabulaire.ttl se passe sans erreur ?";
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Evaluer la pertinence du vocabulaire créé';
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Il existe au moins un vocabulaire importé autre que celui créé ?';
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Evaluer la pertinence du vocabulaire importé';
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Il existe des ressources templates décrivant la structure sémantique de votre projet ?';
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Combien de ressources templates ont été créé ?';
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+            												
+            k = 'Evaluer la pertinence des ressources templates';
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Il existe des items pour donner des exemples de données attendues ?';
+            n = v[k] == 'oui' ? 5 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = "Combien d'item ont été créé ?";
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+            k = 'Evaluer la pertinence des items';
+            n = v[k] ? parseInt(v[k])/2 : 0;
+            setNote(etu, eva, k, n, v[k]);
+
+
+        }
+
+        function setNote(etu, eva, k, n, v){
+            etu.notesAE = etu.notesAE ? etu.notesAE : [];
+            etu.notesAE[k] = etu.notesAE[k] ? etu.notesAE[k] : {'somme':0,'evals':[]};
+            etu.notesAE[k]['somme'] += n;
+            let vRef = 0;
+            if(etu['NP']){
+                //récupère l'évaluation de référence
+                let evRef = aeRef.filter(function(d){
+                    return d[cGitHubEval]==etu['NP'];
+                })
+                if(!evRef[0]){
+                    console.log(etu);
+                    console.log(evRef);
+                }else vRef = evRef[0][k];
+            }
+            etu.notesAE[k]['evals'].push({'e':eva,'n':n,'v':v,'r':vRef,'ne': vRef==v ? 1 : 0 });
+        }
+
+        function afficheResultats(){
+        //affiche les résultats
+        var r = d3.select("#resultats")
+            .selectAll(".etu")
+            .data(dtEtu)
+            .enter().append("div")
+                .attr('class','etu')
+                .html(function(d) {
+                    //console.log(d);
+                    //construction du détail
+                    var html = '<br/>';
+                    html+= "<br/>Nb Auto évaluation faite par l'étudiant = "+d.nbAEfaites;
+                    html+= "<br/>Nb Auto évaluation avec un nom d'évaluateur valide = "+d.nbSaisiValidNP;
+                    html+= "<br/>Nb Auto évaluation avec un nom a évaluer valide = "+d.nbSaisiValidNPeva;
+                    html+= "<br/>Nb Auto évaluation pour cet étudiant ("+d['NP']+") = "+d.nbAE;
+                    //on ne prend pas en compte le nom de l'évaluateur valide
+                    //var noteRedacEval = (d.nbAEfaites + d.nbSaisiValidNP + d.nbSaisiValidNPeva)/3;
+                    var noteRedacEval = (d.nbAEfaites + d.nbSaisiValidNPeva)/2;
+                    
+                    html+= "<br/>Notes Auto évaluation des projets de l'étudiant : ";
+                    var nae = 0, naeProf=0, nbAE=0;
+                    for (var n in  d.notesAE) {
+                        //calcul de la moyenne                            
+                        let sTot = d.notesAE[n].evals.length*5;
+                        let diviseur = sTot/20;
+                        let note20 = d.notesAE[n].somme/diviseur; 
+                        html+= '<p class="note">   - '+n+' = '+note20.toFixed(2)+" / 20</p>"
+                            +'<p class="detailNote">'+d.notesAE[n].somme+' / '+sTot;
+                        nae += note20;
+                        nbAE ++;
+                        let noteProf20 = profEval.etus[d['NP']] ? profEval.etus[d['NP']].notesAE[n].somme*4 : 0;
+                        html+= ' - note prof = '+noteProf20+' / 20';
+                        naeProf += noteProf20;
+                        //vérification des quantifications
+                        let ext = d3.extent(d.notesAE[n].evals.map(e => e.n));
+                        let s = 0;                            
+                        d.notesAE[n].evals.forEach(
+                            e => s+=e.n
+                            );
+                        let moy = s/d.notesAE[n].evals.length;
+                        html+= ' - '+ext[0]+' -> '+ext[1]+' : '+moy.toFixed(2)+'</p>';                    
+                    }
+                    //calcul la pertinence de l'évaluateur
+                    d['pertinence évaluateur'] = 0;
+                    d['pertinence totale'] = 0;
+                    dtEtu.forEach(function(et){
+                        for (var n in  et.notesAE) {
+                            et.notesAE[n].evals.forEach(function(e){
+                                if(d['NP']==e.e){
+                                    d['pertinence évaluateur']+=e.ne;
+                                    d['pertinence totale']+=1;
+                                }
+                            });
+                        }
+                    })
+                    var noteAEPertinence = 20/(d['pertinence totale'] / d['pertinence évaluateur']);
+                    html= '<br/>NON PRIS en COMPTE : Note Pertinence évaluation : '+d['pertinence évaluateur']+' / '+d['pertinence totale']+' = '+noteAEPertinence.toFixed(2) + html;
+
+                    //html+= '<br/>   Moyenne Auto évaluation : '+nae+' / '+d.nbAEprojet+' = '+nae/d.nbAEprojet;
+                    var noteAEProjet = nae/nbAE;
+                    var noteAEProf = naeProf/nbAE;
+                    html= '<br/>   Note Auto évaluation : '+noteAEProjet.toFixed(2)+' / 20 ' + html;;
+                    html= '<br/>   Note Prof évaluation : '+noteAEProf.toFixed(2)+' / 20 ' + html;;
+                    
+                    html= '<br/>Note rédaction Auto évaluation : '+noteRedacEval.toFixed(2)+' / 20' + html;
+
+                    /*calcule la note finale
+                    la note de jury compte double                            
+                    */
+                    //la note de cours                            
+                    var noteFinale = 0;
+                    //la note d'auto évaluation
+                    noteFinale += noteAEProjet;//max=20 
+                    //la note prof évaluation
+                    noteFinale += noteAEProf;//max=20 
+                    //la note de rédaction des AE
+                    noteFinale += noteRedacEval;//max=20
+
+                    //écriture de l'entête
+                    html = '<h3>'+noteFinale.toFixed(2)+' / 60 </h3>' + html;
+                    html = '<h2>Note Finale = '+(noteFinale/3).toFixed(2)+'</h2>' + html;
+                    html = '<h1>'+d['NP'].toUpperCase()+'</h1>'+ html; 
+
+                    html+= '<br/><hr/><br/>';
+
+                    //ajoute le resume
+                    resume = d['NP'].toUpperCase()+', '+(noteFinale/3).toFixed(2); 
+                    d3.select("#resume").append("div")
+                        .html(resume);                                        
+
+                    return html; });  
+        w2popup.unlock();         
+        w2popup.close();         
+    }        
+
+    function getUtlTof(d){
+
+        //merci à https://davidwalsh.name/query-string-javascript
+        // https://developers.google.com/web/updates/2016/01/urlsearchparams?hl=en
+        let url = new URL(d['Votre photo']);
+        let urlParam = new URLSearchParams(url.search);
+        let id = urlParam.get('id');
+        //merci à https://stackoverflow.com/questions/50664868/get-pictures-from-google-drive-folder-with-javascript-to-my-website
+        let urlTof = "https://drive.google.com/uc?id="+id+"&export=download";                        
+        return urlTof; 
+
+    }
+
+    </script>
+</body>
+
+</html>
